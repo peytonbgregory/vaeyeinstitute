@@ -1,0 +1,32 @@
+body {
+  margin: 0 0 !important;
+}
+
+/* -- Fonts -- */
+
+@import 'fonts/foundation-icons.css';
+@import 'fonts/stylesheet.css';
+
+/* -- Metaslider Plugin --*/
+
+.metaslider ul.slides {
+  margin:0;
+  list-style: none;
+}
+
+#jp-intro ul {list-style:none; margin:0 0 1rem 0
+  }
+
+#jp-intro li:before {
+  content: "\f127";
+  font-family:foundation-icons;
+  padding-right:5px
+}
+
+
+/* -- Home page -- */
+
+#jp-stories {
+
+  
+}
