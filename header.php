@@ -39,17 +39,13 @@
         <img src="<?php echo THEME_DIR; ?>/imgs/jpr-logo.svg" />
       </div>
       <div class="cell small-5">
-      <ul class="menu">
-        <li>About The River</li>
-        <li>Admissions</li>
-        <li>JourneyPure Coaching</li>
-      </ul>
+
       </div>
       <div class="cell small-3">
-          <a href="6159135059" class="button expanded">Call Now: 615-913-5059</a>
+          <a href="#" class="button expanded">Call Now: 555-555-5555</a>
       </div>
       <div class="cell small-1">
-        <button type="button" class="menu-icon" data-toggle="jp-mobile-nav"><span></span></button>
+        <button type="button" class="menu-icon" data-toggle="pg-mobile-nav"><span></span></button>
       </div>
     </div>
   </div>
@@ -58,7 +54,7 @@
 <div class="row">
   <div class="small-6 columns">
     <div class="off-canvas-wrapper">
-      <div class="off-canvas-absolute position-right" id="jp-mobile-nav" data-off-canvas>
+      <div class="off-canvas-absolute position-right" id="pg-mobile-nav" data-off-canvas>
         <?php $args = array(
             'menu_class' => 'menu',
             'container' => 'ul',
@@ -69,3 +65,20 @@
     </div>
   </div>
 </div>
+
+<?php echo'
+<div class="top-bar">
+    <div class="top-bar-right">';
+        wp_nav_menu(array(
+            'container' => false,
+            'menu' => __( 'Top Bar Menu', 'textdomain' ),
+            'menu_class' => 'dropdown menu',
+            'theme_location' => 'topbar-menu',
+            'items_wrap'      => '<ul id="%1$s" class="%2$s" data-dropdown-menu>%3$s</ul>',
+            //Recommend setting this to false, but if you need a fallback...
+            'fallback_cb' => 'f6_topbar_menu_fallback',
+            'walker' => new F6_TOPBAR_MENU_WALKER(),
+        ));
+    echo'
+    </div>
+</div>'; ?>

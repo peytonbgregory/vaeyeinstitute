@@ -84,30 +84,139 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     margin: 0 auto;
   }
 }
-/* line 1, ../sass/_main.scss */
-body {
-  margin: 0 0 !important;
+/* -- WordPress Core Classes -- */
+/* =WordPress Core
+-------------------------------------------------------------- */
+/* line 4, ../sass/_main.scss */
+.alignnone {
+  margin: 0.5em 1em 1em 0;
+}
+
+/* line 8, ../sass/_main.scss */
+.aligncenter,
+div.aligncenter {
+  display: block;
+  margin: 0.5em auto 0.5em auto;
+}
+
+/* line 14, ../sass/_main.scss */
+.alignright {
+  float: right;
+  margin: 0.5em 0 1em 1em;
+}
+
+/* line 19, ../sass/_main.scss */
+.alignleft {
+  float: left;
+  margin: 0.5em 1em 1em 0;
+}
+
+/* line 24, ../sass/_main.scss */
+a img.alignright {
+  float: right;
+  margin: 0.5em 0 1em 1em;
+}
+
+/* line 29, ../sass/_main.scss */
+a img.alignnone {
+  margin: 0.5em 1em 1em 0;
+}
+
+/* line 33, ../sass/_main.scss */
+a img.alignleft {
+  float: left;
+  margin: 0.5em 1em 1em 0;
+}
+
+/* line 38, ../sass/_main.scss */
+a img.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 44, ../sass/_main.scss */
+.wp-caption {
+  background: #fefefe;
+  border: 1px solid #f0f0f0;
+  max-width: 96%;
+  /* Image does not overflow the content area */
+  padding: 0.5em 0.5em .875em;
+  text-align: center;
+}
+
+/* line 52, ../sass/_main.scss */
+.wp-caption.alignnone {
+  margin: 0.5em 1em 1em 0;
+}
+
+/* line 56, ../sass/_main.scss */
+.wp-caption.alignleft {
+  margin: 0.5em 1em 1em 0;
+}
+
+/* line 60, ../sass/_main.scss */
+.wp-caption.alignright {
+  margin: 0.5em 0 1em 1em;
+}
+
+/* line 64, ../sass/_main.scss */
+.wp-caption img {
+  border: 0 none;
+  height: auto;
+  margin: 0;
+  max-width: 98.5%;
+  padding: 0;
+  width: auto;
+}
+
+/* line 73, ../sass/_main.scss */
+.wp-caption p.wp-caption-text {
+  font-size: 80%;
+  line-height: auto;
+  margin: 0;
+  padding: 0 .5em .5em;
+}
+
+/* Text meant only for screen readers. */
+/* line 81, ../sass/_main.scss */
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+  white-space: nowrap;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+/* line 90, ../sass/_main.scss */
+.screen-reader-text:focus {
+  background-color: #fefefe;
+  border-radius: 3px;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+  clip: auto !important;
+  color: #0a0a0a;
+  display: block;
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: bold;
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 1em;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000;
+  /* Above WP toolbar. */
 }
 
 /* -- Fonts -- */
 /* -- Metaslider Plugin --*/
-/* line 12, ../sass/_main.scss */
+/* line 117, ../sass/_main.scss */
 .metaslider ul.slides {
   margin: 0;
   list-style: none;
-}
-
-/* line 17, ../sass/_main.scss */
-#jp-intro ul {
-  list-style: none;
-  margin: 0 0 1rem 0;
-}
-
-/* line 20, ../sass/_main.scss */
-#jp-intro li:before {
-  content: "\f127";
-  font-family: foundation-icons;
-  padding-right: 5px;
 }
 
 /* -- Home page -- */

@@ -39,6 +39,15 @@ add_action( 'wp_enqueue_scripts', 'enqueue_scripts' );
 
 
 
+// Enable or Disable Custom Post Types
+
+include 'types/service.php';
+include 'types/location.php';
+include 'types/provider.php';
+include 'types/career.php';
+// include 'types/other.php';
+// include 'types/other.php';
+
 
 
 
@@ -51,96 +60,80 @@ function pgthrottle_widgets_init() {
 	register_sidebar( array(
 		'name'          => 'Sidebar',
 		'id'            => 'sidebar-1',
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
+		'before_widget' => '<div id="%1$s" class="widget sidebar-widget %2$s">',
+		'after_widget'  => '</div>',
 		'before_title'  => '<h3 class="widget-title">',
 		'after_title'   => '</h3>',
 	) );
+
 	register_sidebar( array(
-		'name'          => 'Parallax Overlay: First',
-		'id'            => 'parallax-overlay',
-		'before_widget' => '<aside id="%1$s" class="widget parallax-overlay-widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h3 class="widget-title">',
-		'after_title'   => '</h3>',
+		'name'          => 'Footer : First',
+		'id'            => 'footer-first',
+		'before_widget' => '<div id="%1$s" class="widget footer-widget cell %2$s small-12 medium-6 large-3">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h4 class="widget-title">',
+		'after_title'   => '</h4>',
 	) );
-	register_sidebar( array(
-		'name'          => 'Parallax Overlay: Second - Left',
-		'id'            => 'parallax-overlay-second-left',
-		'before_widget' => '<aside id="%1$s" class="widget parallax-overlay-widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h3 class="widget-title">',
-		'after_title'   => '</h3>',
+  register_sidebar( array(
+		'name'          => 'Footer : Second',
+		'id'            => 'footer-second',
+		'before_widget' => '<div id="%1$s" class="widget footer-widget %2$s cell small-12 medium-6 large-3">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h4 class="widget-title">',
+		'after_title'   => '</h4>',
 	) );
-	register_sidebar( array(
-		'name'          => 'Parallax Overlay: Second - Right',
-		'id'            => 'parallax-overlay-second-right',
-		'before_widget' => '<aside id="%1$s" class="widget parallax-overlay-widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h3 class="widget-title">',
-		'after_title'   => '</h3>',
+  register_sidebar( array(
+		'name'          => 'Footer : Third',
+		'id'            => 'footer-third',
+		'before_widget' => '<div id="%1$s" class="widget footer-widget %2$s cell small-12 medium-6 large-3">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h4 class="widget-title">',
+		'after_title'   => '</h4>',
 	) );
-	register_sidebar( array(
-		'name'          => 'Home Left',
-		'id'            => 'home-left',
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h3 class="widget-title">',
-		'after_title'   => '</h3>',
-	) );
-	register_sidebar( array(
-		'name'          => 'Home Middle',
-		'id'            => 'home-middle',
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h3 class="widget-title">',
-		'after_title'   => '</h3>',
-	) );
-	register_sidebar( array(
-		'name'          => 'Home Right',
-		'id'            => 'home-right',
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h3 class="widget-title">',
-		'after_title'   => '</h3>',
-	) );
-	register_sidebar( array(
-		'name'          => 'Footer Left',
-		'id'            => 'footer-left',
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h3 class="widget-title">',
-		'after_title'   => '</h3>',
-	) );
-	register_sidebar( array(
-		'name'          => 'Footer Middle',
-		'id'            => 'footer-middle',
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h3 class="widget-title">',
-		'after_title'   => '</h3>',
-	) );
-	register_sidebar( array(
-		'name'          => 'Footer Right',
-		'id'            => 'footer-right',
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h3 class="widget-title">',
-		'after_title'   => '</h3>',
+  register_sidebar( array(
+		'name'          => 'Footer : Fourth',
+		'id'            => 'footer-fourth',
+		'before_widget' => '<div id="%1$s" class="widget footer-widget %2$s cell small-12 medium-6 large-3">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h4 class="widget-title">',
+		'after_title'   => '</h4>',
 	) );
 }
 add_action( 'widgets_init', 'pgthrottle_widgets_init' );
 
-/* Menus */
-function pgthrottle_menus() {
+
+
+// Register Custom Navigation Walker
+require_once('includes/foundationwalker.php');
+
+// Menus
+function register_pg_menus() {
   register_nav_menus(
     array(
-      'header-menu' => __( 'Header Menu' ),
-      'footer-menu' => __( 'Footer Menu' )
+      'pre-menu' => __( 'Pre Menu', 'pgthrottle' ),
+      'header-menu' => __( 'Header Menu', 'pgthrottle' ),
+      'footer-menu' => __( 'Footer Menu' , 'pgthrottle')
     )
   );
 }
-add_action( 'menus_init', 'pgthrottle_menus' );
+
+//Add Menu to theme setup hook
+add_action( 'after_setup_theme', '_theme_setup' );
+
+function _theme_setup()
+{
+    add_action( 'init', 'register_pg_menus' );
+
+    //Theme Support
+    add_theme_support( 'menus' );
+}
+
+
+
+
+
+
+
 
 // Register Custom Navigation Walker (Old theme - BootStrap)
 // require_once('includes/navwalker.php');
@@ -160,6 +153,7 @@ function browser_body_class($classes) {
 	if($is_iphone) $classes[] = 'iphone';
 	return $classes;
 }
+
 
 // Added Support for Post Thumbnails
 add_theme_support( 'post-thumbnails' );
@@ -335,6 +329,21 @@ function pgthrottle_pre_user_query($user_search) {
     $user_search->query_where = str_replace('WHERE 1=1',
       "WHERE 1=1 AND {$wpdb->users}.user_login != 'root'",$user_search->query_where);
   }
+}
+
+
+
+
+
+if( function_exists('acf_add_options_page') ) {
+	acf_add_options_page(array(
+		'page_title' 	=> 'Theme Settings',
+		'menu_title'	=> 'Theme Settings',
+		'menu_slug' 	=> 'theme-general-settings',
+		'capability'	=> 'edit_posts',
+    'menu_icon'   => 'dashicons-admin-settings',
+		'redirect'		=> false
+	));
 }
 
 
