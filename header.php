@@ -28,57 +28,34 @@
 <?php flush(); ?>
 <body <?php body_class(); ?>>
 <div class="site-wrapper">
-
-
-
-
 <header class="site-header">
   <div class="grid-container">
-    <div class="grid-x grid-margin-x">
-      <div class="cell small-3">
-        <img src="<?php echo THEME_DIR; ?>/imgs/jpr-logo.svg" />
+    <div class="grid-x grid-margin-x align-middle">
+      <div class="cell small-4">
+        <img src="<?php echo THEME_DIR; ?>/imgs/virginia-eye-logo.svg" />
       </div>
-      <div class="cell small-5">
-
-      </div>
-      <div class="cell small-3">
-          <a href="#" class="button expanded">Call Now: 555-555-5555</a>
-      </div>
-      <div class="cell small-1">
-        <button type="button" class="menu-icon" data-toggle="pg-mobile-nav"><span></span></button>
-      </div>
+      <div class="cell auto text-right">
+            <?php get_template_part('includes/social'); ?>
+              <a href="#" class="button radius phone-number">Call Now: 804-287-4200</a>
+              <button type="button" class="menu-icon" data-toggle="pg-mobile-nav"><span></span></button>
+          </div>
     </div>
   </div>
 </header>
-
-<div class="row">
-  <div class="small-6 columns">
-    <div class="off-canvas-wrapper">
-      <div class="off-canvas-absolute position-right" id="pg-mobile-nav" data-off-canvas>
-        <?php $args = array(
-            'menu_class' => 'menu',
-            'container' => 'ul',
-            'menu' => 'Header Menu'
-        ); wp_nav_menu( $args ); ?>
-      </div>
-
-    </div>
-  </div>
-</div>
-
-<?php echo'
-<div class="top-bar">
-    <div class="top-bar-right">';
-        wp_nav_menu(array(
-            'container' => false,
-            'menu' => __( 'Top Bar Menu', 'textdomain' ),
-            'menu_class' => 'dropdown menu',
-            'theme_location' => 'topbar-menu',
-            'items_wrap'      => '<ul id="%1$s" class="%2$s" data-dropdown-menu>%3$s</ul>',
-            //Recommend setting this to false, but if you need a fallback...
-            'fallback_cb' => 'f6_topbar_menu_fallback',
-            'walker' => new F6_TOPBAR_MENU_WALKER(),
-        ));
-    echo'
-    </div>
-</div>'; ?>
+<?php
+echo'<nav class="site-navigation grid-container">
+<div class="grid-x">
+	<div class="cell">';
+		wp_nav_menu(array(
+	    	'container' => false,
+	    	'menu' => __( 'Header Menu', 'pgthrottle' ),
+	    	'menu_class' => 'dropdown menu',
+	    	'theme_location' => 'header-menu',
+	    	'items_wrap'      => '<ul id="%1$s" class="%2$s" data-dropdown-menu>%3$s</ul>',
+	    	//Recommend setting this to false, but if you need a fallback...
+	    	'fallback_cb' => 'f6_topbar_menu_fallback',
+	        'walker' => new F6_TOPBAR_MENU_WALKER(),
+		));
+	echo'
+	</div>
+</div></nav>'; ?>

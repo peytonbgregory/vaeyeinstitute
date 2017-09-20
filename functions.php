@@ -104,17 +104,18 @@ add_action( 'widgets_init', 'pgthrottle_widgets_init' );
 
 
 // Register Custom Navigation Walker
-require_once('includes/foundationwalker.php');
+require_once('includes/foundation-walker-top.php');
 
 // Menus
-function register_pg_menus() {
-  register_nav_menus(
-    array(
-      'pre-menu' => __( 'Pre Menu', 'pgthrottle' ),
-      'header-menu' => __( 'Header Menu', 'pgthrottle' ),
-      'footer-menu' => __( 'Footer Menu' , 'pgthrottle')
-    )
-  );
+// Top Menu *
+//Register Menu
+function _register_menu() {
+	register_nav_menu( 
+
+     'header-menu', __( 'Header Menu','pgthrottle' )
+
+    );
+
 }
 
 //Add Menu to theme setup hook
@@ -122,10 +123,10 @@ add_action( 'after_setup_theme', '_theme_setup' );
 
 function _theme_setup()
 {
-    add_action( 'init', 'register_pg_menus' );
+	add_action( 'init', '_register_menu' );
 
-    //Theme Support
-    add_theme_support( 'menus' );
+	//Theme Support
+	add_theme_support( 'menus' );
 }
 
 

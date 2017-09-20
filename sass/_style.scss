@@ -1,0 +1,33 @@
+
+
+header.site-header {
+  padding-top:1em;
+  padding-bottom: 1em;
+  .button {
+    margin: 0;
+    padding: 0.45em;
+    font-size: 1em;
+    font-weight: bold;
+  }
+}
+
+// Home Page Styles
+
+#pg-intro {
+  background:$dark-blue;
+  border-top:1px solid $light-blue;
+  border-bottom:1px solid $black;
+  color:$white;
+  a.intro-read {
+    color:$black;
+  }
+  div.left-wrap {
+    width:25%;
+    float:left;
+    font-size:5em;
+  }
+  div.right-wrap {
+    float:right;
+    width:75%;
+  }
+}

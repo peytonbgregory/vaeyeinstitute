@@ -69,20 +69,22 @@ $global-font-size: 100%;
 $global-width: rem-calc(1200);
 $global-lineheight: 1.5;
 $foundation-palette: (
-  primary: #003399,
-  secondary: #009933,
-  success: #009e49,
-  warning: #f58a07,
-  alert: #f58a07,
+  primary: #64a9cd,
+  secondary: #2074a1,
+  success: #2074a1,
+  warning: #bb1212,
+  alert: #bb1212,
 );
-$light-gray: #BDBEBD;
-$medium-gray: #909cc2;
-$dark-gray: #5B5D62;
+$light-blue:#64a9cd; // Added
+$dark-blue:#2074a1; // Added
+$light-gray: #eaf1f4;
+$medium-gray: #cfd4d5;
+$dark-gray: #555555;
 $black: #0a0a0a;
 $white: #fefefe;
 $body-background: $white;
 $body-font-color: $black;
-$body-font-family: 'Open Sans', Arial, sans-serif;
+$body-font-family: 'Cabin', Arial, sans-serif;
 $body-antialiased: true;
 $global-margin: 1rem;
 $global-padding: 1rem;
@@ -130,10 +132,10 @@ $block-grid-max: 8;
 // 4. Base Typography
 // ------------------
 
-$header-font-family: 'Playfair Display', serif;
+$header-font-family: 'Ubuntu', sans-serif;
 $header-font-weight: $global-weight-normal;
 $header-font-style: normal;
-$font-family-monospace: 'Oswald', sans-serif;
+$font-family-monospace: 'Ubuntu', sans-serif;
 $header-color: inherit;
 $header-lineheight: 1.4;
 $header-margin-bottom: 0.5rem;
