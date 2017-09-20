@@ -15,21 +15,21 @@ get_header(); ?>
 			<div class="small-4 cell">
 				<div class="left-wrap"><i class="fi-eye large"></i></div>
 				<div class="right-wrap">
-					<div class="intro-title">Eye Animations</div>
+					<div class="intro-title">3D Eye Animations</div>
 					<a class="intro-read text-right">Read More...</a>
 				</div>
 			</div>
 			<div class="small-4 cell">
-				<div class="left-wrap"><i class="fi-eye large"></i></div>
+				<div class="left-wrap"><i class="fi-comment large"></i></div>
 				<div class="right-wrap">
-					<div class="intro-title">Eye Animations</div>
+					<div class="intro-title">Patient Reviews</div>
 					<a class="intro-read text-right">Read More...</a>
 				</div>
 			</div>
 			<div class="small-4 cell">
-				<div class="left-wrap"><i class="fi-eye large"></i></div>
+				<div class="left-wrap"><i class="fi-cloud large"></i></div>
 				<div class="right-wrap">
-					<div class="intro-title">Eye Animations</div>
+					<div class="intro-title">Patient Portal</div>
 					<a class="intro-read text-right">Read More...</a>
 				</div>
 			</div>
