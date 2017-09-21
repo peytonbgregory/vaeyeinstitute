@@ -193,20 +193,83 @@ header.site-header .button {
   border-bottom: 1px solid #0a0a0a;
   color: #fefefe;
 }
-/* line 21, ../sass/_style.scss */
-#pg-intro a.intro-read {
+/* line 22, ../sass/_style.scss */
+#pg-intro i {
+  font-size: 7em;
+  line-height: 1em;
+}
+/* line 27, ../sass/_style.scss */
+#pg-intro .intro-title {
+  font-size: 2em;
+}
+/* line 30, ../sass/_style.scss */
+#pg-intro .intro-read {
   color: #0a0a0a;
+  font-size: 0.825rem;
 }
-/* line 24, ../sass/_style.scss */
-#pg-intro div.left-wrap {
-  width: 25%;
-  float: left;
-  font-size: 5em;
+
+/* line 40, ../sass/_style.scss */
+.pg-search-wrapper input {
+  min-height: 40px;
+  margin: 0.25em 0;
 }
-/* line 29, ../sass/_style.scss */
-#pg-intro div.right-wrap {
-  float: right;
-  width: 75%;
+
+/* line 48, ../sass/_style.scss */
+.autocomplete-suggestions {
+  text-align: left;
+  cursor: default;
+  border: 1px solid #ccc;
+  border-top: 0;
+  background: #fff;
+  box-shadow: -1px 1px 3px rgba(0, 0, 0, 0.1);
+  /* core styles should not be changed */
+  position: absolute;
+  display: none;
+  z-index: 9999;
+  max-height: 254px;
+  overflow: hidden;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+/* line 54, ../sass/_style.scss */
+.autocomplete-suggestion {
+  position: relative;
+  padding: 0 .6em;
+  line-height: 23px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 1.02em;
+  color: #333;
+}
+
+/* line 55, ../sass/_style.scss */
+.autocomplete-suggestion b {
+  font-weight: normal;
+  color: #1f8dd6;
+}
+
+/* line 56, ../sass/_style.scss */
+.autocomplete-suggestion.selected {
+  background: #f0f0f0;
+}
+
+/* line 62, ../sass/_style.scss */
+nav.site-navigation li > a {
+  color: #555555;
+  font-size: 1.2em;
+}
+
+/* line 73, ../sass/_style.scss */
+#pg-slideshow {
+  max-height: 50vh;
+  overflow: hidden;
+}
+
+/* line 81, ../sass/_style.scss */
+.bg-light-gray {
+  background: #eaf1f4;
 }
 
 /*! normalize-scss | MIT/GPLv2 License | bit.ly/normalize-scss */
@@ -5634,7 +5697,7 @@ a.button:hover, a.button:focus {
   display: block;
   width: 0;
   height: 0;
-  border: inset 6px;
+  border: inset 3px;
   content: '';
   border-right-width: 0;
   border-left-style: solid;
@@ -5647,7 +5710,7 @@ a.button:hover, a.button:focus {
   display: block;
   width: 0;
   height: 0;
-  border: inset 6px;
+  border: inset 3px;
   content: '';
   border-left-width: 0;
   border-right-style: solid;
@@ -5723,21 +5786,21 @@ a.button:hover, a.button:focus {
 /* line 101, ../node_modules/foundation-sites/scss/components/_dropdown-menu.scss */
 .dropdown.menu > li.is-dropdown-submenu-parent > a {
   position: relative;
-  padding-right: 1.5rem;
+  padding-right: 1rem;
 }
 /* line 106, ../node_modules/foundation-sites/scss/components/_dropdown-menu.scss */
 .dropdown.menu > li.is-dropdown-submenu-parent > a::after {
   display: block;
   width: 0;
   height: 0;
-  border: inset 6px;
+  border: inset 3px;
   content: '';
   border-bottom-width: 0;
   border-top-style: solid;
   border-color: #64a9cd transparent transparent;
   right: 5px;
   left: auto;
-  margin-top: -3px;
+  margin-top: -1.5px;
 }
 /* line 149, ../node_modules/foundation-sites/scss/components/_dropdown-menu.scss */
 .dropdown.menu a {
@@ -5787,7 +5850,7 @@ a.button:hover, a.button:focus {
   display: block;
   width: 0;
   height: 0;
-  border: inset 6px;
+  border: inset 3px;
   content: '';
   border-left-width: 0;
   border-right-style: solid;
@@ -5798,7 +5861,7 @@ a.button:hover, a.button:focus {
   display: block;
   width: 0;
   height: 0;
-  border: inset 6px;
+  border: inset 3px;
   content: '';
   border-right-width: 0;
   border-left-style: solid;
@@ -5820,21 +5883,21 @@ a.button:hover, a.button:focus {
   /* line 101, ../node_modules/foundation-sites/scss/components/_dropdown-menu.scss */
   .dropdown.menu.medium-horizontal > li.is-dropdown-submenu-parent > a {
     position: relative;
-    padding-right: 1.5rem;
+    padding-right: 1rem;
   }
   /* line 106, ../node_modules/foundation-sites/scss/components/_dropdown-menu.scss */
   .dropdown.menu.medium-horizontal > li.is-dropdown-submenu-parent > a::after {
     display: block;
     width: 0;
     height: 0;
-    border: inset 6px;
+    border: inset 3px;
     content: '';
     border-bottom-width: 0;
     border-top-style: solid;
     border-color: #64a9cd transparent transparent;
     right: 5px;
     left: auto;
-    margin-top: -3px;
+    margin-top: -1.5px;
   }
   /* line 116, ../node_modules/foundation-sites/scss/components/_dropdown-menu.scss */
   .dropdown.menu.medium-vertical > li .is-dropdown-submenu {
@@ -5862,7 +5925,7 @@ a.button:hover, a.button:focus {
     display: block;
     width: 0;
     height: 0;
-    border: inset 6px;
+    border: inset 3px;
     content: '';
     border-left-width: 0;
     border-right-style: solid;
@@ -5873,7 +5936,7 @@ a.button:hover, a.button:focus {
     display: block;
     width: 0;
     height: 0;
-    border: inset 6px;
+    border: inset 3px;
     content: '';
     border-right-width: 0;
     border-left-style: solid;
@@ -5896,21 +5959,21 @@ a.button:hover, a.button:focus {
   /* line 101, ../node_modules/foundation-sites/scss/components/_dropdown-menu.scss */
   .dropdown.menu.large-horizontal > li.is-dropdown-submenu-parent > a {
     position: relative;
-    padding-right: 1.5rem;
+    padding-right: 1rem;
   }
   /* line 106, ../node_modules/foundation-sites/scss/components/_dropdown-menu.scss */
   .dropdown.menu.large-horizontal > li.is-dropdown-submenu-parent > a::after {
     display: block;
     width: 0;
     height: 0;
-    border: inset 6px;
+    border: inset 3px;
     content: '';
     border-bottom-width: 0;
     border-top-style: solid;
     border-color: #64a9cd transparent transparent;
     right: 5px;
     left: auto;
-    margin-top: -3px;
+    margin-top: -1.5px;
   }
   /* line 116, ../node_modules/foundation-sites/scss/components/_dropdown-menu.scss */
   .dropdown.menu.large-vertical > li .is-dropdown-submenu {
@@ -5938,7 +6001,7 @@ a.button:hover, a.button:focus {
     display: block;
     width: 0;
     height: 0;
-    border: inset 6px;
+    border: inset 3px;
     content: '';
     border-left-width: 0;
     border-right-style: solid;
@@ -5949,7 +6012,7 @@ a.button:hover, a.button:focus {
     display: block;
     width: 0;
     height: 0;
-    border: inset 6px;
+    border: inset 3px;
     content: '';
     border-right-width: 0;
     border-left-style: solid;
@@ -5982,7 +6045,7 @@ a.button:hover, a.button:focus {
   top: 50%;
   right: 5px;
   left: auto;
-  margin-top: -6px;
+  margin-top: -3px;
 }
 /* line 214, ../node_modules/foundation-sites/scss/components/_dropdown-menu.scss */
 .is-dropdown-submenu-parent.opens-inner > .is-dropdown-submenu {
@@ -6026,7 +6089,7 @@ a.button:hover, a.button:focus {
   display: block;
   width: 0;
   height: 0;
-  border: inset 6px;
+  border: inset 3px;
   content: '';
   border-left-width: 0;
   border-right-style: solid;
@@ -6037,7 +6100,7 @@ a.button:hover, a.button:focus {
   display: block;
   width: 0;
   height: 0;
-  border: inset 6px;
+  border: inset 3px;
   content: '';
   border-right-width: 0;
   border-left-style: solid;

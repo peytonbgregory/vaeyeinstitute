@@ -107,6 +107,13 @@ a img.aligncenter {
 	z-index: 100000; /* Above WP toolbar. */
 }
 
+// Foundation 5 Styles
+button.radius, .button.radius, label.radius, .label.radius {
+    border-radius: 3px; }
+  button.round, .button.round, label.round, .label.round {
+    border-radius: 1000px; }
+
+
 /* -- Fonts -- */
 
 @import 'fonts/foundation-icons.css';

@@ -34,9 +34,54 @@ function enqueue_scripts() {
      wp_enqueue_script( 'foundation-script' );
 
 
+     // AutoComplete JS Search Feature
+
+
+
+      wp_enqueue_script('autocomplete', THEME_DIR .'/js/jquery.auto-complete.js', array('jquery'));
+      	wp_enqueue_script('search-script', THEME_DIR .'/js/search.js', array('jquery', 'autocomplete'));
+
+
+
+
+
 }
 add_action( 'wp_enqueue_scripts', 'enqueue_scripts' );
 
+
+
+
+// AutoComplete JS Search Feature
+// AutoComplete JS Search Feature
+// AutoComplete JS Search Feature
+
+//get listings for 'works at' on submit listing page
+add_action('wp_ajax_nopriv_get_listing_names', 'ajax_listings');
+add_action('wp_ajax_get_listing_names', 'ajax_listings');
+
+function ajax_listings() {
+	global $wpdb; //get access to the WordPress database object variable
+
+	//get names of all businesses
+	$name = $wpdb->esc_like(stripslashes($_POST['name'])).'%'; //escape for use in LIKE statement
+	$sql = "select post_title
+		from $wpdb->posts
+		where post_title like %s
+	  post_status='publish'";
+
+	$sql = $wpdb->prepare($sql, $name);
+
+	$results = $wpdb->get_results($sql);
+
+	//copy the business titles to a simple array
+	$titles = array();
+	foreach( $results as $r )
+		$titles[] = addslashes($r->post_title);
+
+	echo json_encode($titles); //encode into JSON format and output
+
+	die(); //stop "0" from being output
+}
 
 
 // Enable or Disable Custom Post Types
@@ -50,7 +95,44 @@ include 'types/career.php';
 
 
 
+// Function Helper
 
+function pg_class_loop() {
+    global $wp_query;
+    $loop = 'template-type-notfound';
+
+    if ( $wp_query->is_page ) {
+        $loop = is_front_page() ? 'template-type-front' : 'template-type-page';
+    } elseif ( $wp_query->is_home ) {
+        $loop = 'template-type-home';
+    } elseif ( $wp_query->is_single ) {
+        $loop = ( $wp_query->is_attachment ) ? 'template-type-attachment' : 'template-type-single';
+    } elseif ( $wp_query->is_category ) {
+        $loop = 'template-type-category';
+    } elseif ( $wp_query->is_tag ) {
+        $loop = 'template-type-tag';
+    } elseif ( $wp_query->is_tax ) {
+        $loop = 'template-type-tax';
+    } elseif ( $wp_query->is_archive ) {
+        if ( $wp_query->is_day ) {
+            $loop = 'template-type-day';
+        } elseif ( $wp_query->is_month ) {
+            $loop = 'template-type-month';
+        } elseif ( $wp_query->is_year ) {
+            $loop = 'template-type-year';
+        } elseif ( $wp_query->is_author ) {
+            $loop = 'template-type-author';
+        } else {
+            $loop = 'template-type-archive';
+        }
+    } elseif ( $wp_query->is_search ) {
+        $loop = 'template-type-search';
+    } elseif ( $wp_query->is_404 ) {
+        $loop = 'template-type-notfound';
+    }
+
+    return $loop;
+}
 
 
 
@@ -58,12 +140,12 @@ include 'types/career.php';
 /* Register our sidebars and widgetized areas. */
 function pgthrottle_widgets_init() {
 	register_sidebar( array(
-		'name'          => 'Sidebar',
-		'id'            => 'sidebar-1',
+		'name'          => 'Primary Sidebar',
+		'id'            => 'primary',
 		'before_widget' => '<div id="%1$s" class="widget sidebar-widget %2$s">',
 		'after_widget'  => '</div>',
-		'before_title'  => '<h3 class="widget-title">',
-		'after_title'   => '</h3>',
+		'before_title'  => '<h4 class="widget-title">',
+		'after_title'   => '</h4>',
 	) );
 
 	register_sidebar( array(
@@ -109,21 +191,21 @@ require_once('includes/foundation-walker-top.php');
 // Menus
 // Top Menu *
 //Register Menu
-function _register_menu() {
-	register_nav_menu( 
-
-     'header-menu', __( 'Header Menu','pgthrottle' )
-
-    );
-
+function pgthrottle_register_menus() {
+	register_nav_menus(
+    array (
+     'header-menu', __( 'Header Menu','pgthrottle' ),
+     'footer-menu', __( 'Footer Menu','pgthrottle' )
+     )
+  );
 }
 
 //Add Menu to theme setup hook
-add_action( 'after_setup_theme', '_theme_setup' );
+add_action( 'after_setup_theme', 'pgthrottle_theme_setup' );
 
-function _theme_setup()
+function pgthrottle_theme_setup()
 {
-	add_action( 'init', '_register_menu' );
+	add_action( 'init', 'pgthrottle_register_menus' );
 
 	//Theme Support
 	add_theme_support( 'menus' );

@@ -35,27 +35,38 @@
         <img src="<?php echo THEME_DIR; ?>/imgs/virginia-eye-logo.svg" />
       </div>
       <div class="cell auto text-right">
+          <button type="button" class="menu-icon" data-toggle="pg-mobile-nav"><span></span></button>
             <?php get_template_part('includes/social'); ?>
               <a href="#" class="button radius phone-number">Call Now: 804-287-4200</a>
-              <button type="button" class="menu-icon" data-toggle="pg-mobile-nav"><span></span></button>
+
           </div>
     </div>
   </div>
 </header>
 <?php
-echo'<nav class="site-navigation grid-container">
-<div class="grid-x">
-	<div class="cell">';
+echo'<nav class="site-navigation"><div class="grid-container align-middle">
+<div class="grid-x grid-margin-x">';
 		wp_nav_menu(array(
+      // 'container'       => 'div',
+      // 'container_class' => 'menu-{menu slug}-container',
+      // 'container_id'    => ,
+      // 'menu_id'         => ,
+      // 'echo'            => true,
+      // 'before'          => ,
+      // 'after'           => ,
+      // 'link_before'     => ,
+      // 'link_after'      => ,
+      // 'depth'           => 0,
 	    	'container' => false,
 	    	'menu' => __( 'Header Menu', 'pgthrottle' ),
 	    	'menu_class' => 'dropdown menu',
 	    	'theme_location' => 'header-menu',
-	    	'items_wrap'      => '<ul id="%1$s" class="%2$s" data-dropdown-menu>%3$s</ul>',
+	    	'items_wrap'      => '<ul id="%1$s" class="%2$s cell auto" data-dropdown-menu>%3$s</ul>',
 	    	//Recommend setting this to false, but if you need a fallback...
 	    	'fallback_cb' => 'f6_topbar_menu_fallback',
-	        'walker' => new F6_TOPBAR_MENU_WALKER(),
+	       'walker' => new F6_TOPBAR_MENU_WALKER(),
 		));
-	echo'
-	</div>
-</div></nav>'; ?>
+
+
+  get_search_form();
+echo'</div></div></nav>'; ?>
