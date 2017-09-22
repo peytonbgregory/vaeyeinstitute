@@ -4,84 +4,81 @@ define("THEME_DIR", get_template_directory_uri());
 /*--- REMOVE GENERATOR META TAG ---*/
 remove_action('wp_head', 'wp_generator');
 
-// ENQUEUE STYLES
-
-function enqueue_styles() {
-
-    /** REGISTER css/screen.css **/
-    wp_register_style( 'foundation-icon-style', THEME_DIR . '/fonts/foundation-icons.css', array(), '1', 'screen' );
-      wp_enqueue_style( 'foundation-icon-style' );
-    wp_register_style( 'screen-style', THEME_DIR . '/stylesheets/screen.css', array(), '1', 'screen' );
-      wp_enqueue_style( 'screen-style' );
-    wp_register_style( 'print-style', THEME_DIR . '/stylesheets/print.css', array(), '1', 'print' );
-    wp_enqueue_style( 'print-style' );
-
-}
+// Register Custom Navigation Walker
+require_once ('includes/foundation-walker-top.php');
 
 
-add_action( 'wp_enqueue_scripts', 'enqueue_styles' );
 
 // ENQUEUE SCRIPTS
 
-function enqueue_scripts() {
+function register_my_scripts() {
+  wp_deregister_script('jquery');
+  wp_register_script('jquery', THEME_DIR . "/node_modules/jquery/dist/jquery.min.js", array(),'3.2.1',false);
+  wp_register_script('foundation', THEME_DIR . "/node_modules/foundation-sites/dist/js/foundation.min.js", array('jquery'),'6.4.3',true);
 
-    /** REGISTER HTML5 Shim **/
-    // wp_register_script( 'html5-shim', 'http://html5shim.googlecode.com/svn/trunk/html5.js', array( 'jquery' ), '1', false );
-    // wp_enqueue_script( 'html5-shim' );
-
-    /** REGISTER HTML5 OtherScript.js **/
-    wp_register_script( 'foundation-script', THEME_DIR . '/node_modules/foundation-sites/dist/js/foundation.min.js', array( 'jquery' ), '1', false );
-     wp_enqueue_script( 'foundation-script' );
-
-
-     // AutoComplete JS Search Feature
-
-
-
-      wp_enqueue_script('autocomplete', THEME_DIR .'/js/jquery.auto-complete.js', array('jquery'));
-      	wp_enqueue_script('search-script', THEME_DIR .'/js/search.js', array('jquery', 'autocomplete'));
-
-
-
-
-
+  wp_enqueue_script(array('jquery','foundation'));
 }
-add_action( 'wp_enqueue_scripts', 'enqueue_scripts' );
 
+// ENQUEUE STYLES
 
+function register_my_styles(){
 
-
-// AutoComplete JS Search Feature
-// AutoComplete JS Search Feature
-// AutoComplete JS Search Feature
-
-//get listings for 'works at' on submit listing page
-add_action('wp_ajax_nopriv_get_listing_names', 'ajax_listings');
-add_action('wp_ajax_get_listing_names', 'ajax_listings');
-
-function ajax_listings() {
-	global $wpdb; //get access to the WordPress database object variable
-
-	//get names of all businesses
-	$name = $wpdb->esc_like(stripslashes($_POST['name'])).'%'; //escape for use in LIKE statement
-	$sql = "select post_title
-		from $wpdb->posts
-		where post_title like %s
-	  post_status='publish'";
-
-	$sql = $wpdb->prepare($sql, $name);
-
-	$results = $wpdb->get_results($sql);
-
-	//copy the business titles to a simple array
-	$titles = array();
-	foreach( $results as $r )
-		$titles[] = addslashes($r->post_title);
-
-	echo json_encode($titles); //encode into JSON format and output
-
-	die(); //stop "0" from being output
+    wp_register_style( 'foundation-icon', THEME_DIR . '/fonts/foundation-icons.css', array(), '1', 'screen' );
+    wp_register_style( 'screen', THEME_DIR . '/stylesheets/screen.css', array(), '1', 'screen' );
+    wp_register_style( 'print', THEME_DIR . '/stylesheets/print.css', array(), '1', 'print' );
+    wp_register_style('foundation', THEME_DIR . "/css/foundation.min.css",array('main'),'6.4.3','screen');
+  wp_enqueue_style(array('foundation-icon','screen','print','foundation'));
 }
+
+add_action('wp_print_scripts','register_my_scripts', 0);
+add_action('wp_print_styles', 'register_my_styles', 2);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function pgthrottle_register_menus() {
+	register_nav_menus(
+    array (
+     'header-menu', __( 'Header Menu','pgthrottle' ),
+     'footer-menu', __( 'Footer Menu','pgthrottle' )
+     )
+  );
+}
+
+//Add Menu to theme setup hook
+add_action( 'after_setup_theme', 'pgthrottle_theme_setup' );
+
+	add_action( 'init', 'pgthrottle_register_menus' );
+
+	//Theme Support
+	add_theme_support( 'menus' );
+
+
+
+// AutoComplete JS Search Feature
+// AutoComplete JS Search Feature
+// AutoComplete JS Search Feature
+
+
 
 
 // Enable or Disable Custom Post Types
@@ -183,43 +180,6 @@ function pgthrottle_widgets_init() {
 }
 add_action( 'widgets_init', 'pgthrottle_widgets_init' );
 
-
-
-// Register Custom Navigation Walker
-require_once('includes/foundation-walker-top.php');
-
-// Menus
-// Top Menu *
-//Register Menu
-function pgthrottle_register_menus() {
-	register_nav_menus(
-    array (
-     'header-menu', __( 'Header Menu','pgthrottle' ),
-     'footer-menu', __( 'Footer Menu','pgthrottle' )
-     )
-  );
-}
-
-//Add Menu to theme setup hook
-add_action( 'after_setup_theme', 'pgthrottle_theme_setup' );
-
-function pgthrottle_theme_setup()
-{
-	add_action( 'init', 'pgthrottle_register_menus' );
-
-	//Theme Support
-	add_theme_support( 'menus' );
-}
-
-
-
-
-
-
-
-
-// Register Custom Navigation Walker (Old theme - BootStrap)
-// require_once('includes/navwalker.php');
 
 // Adds class to body tag depending on the browser
 add_filter('body_class','browser_body_class');

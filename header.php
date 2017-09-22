@@ -22,6 +22,11 @@
     <title><?php wp_title(); ?> - <?php bloginfo( 'name' ); ?></title>
 
     <!--=== WP_HEAD() ===-->
+    <script>
+    jQuery(document).ready(function ($) {
+    $(document).foundation();
+  });
+</script>
     <?php wp_head(); ?>
 
 </head>
