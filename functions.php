@@ -10,28 +10,25 @@ require_once ('includes/foundation-walker-top.php');
 
 
 // ENQUEUE SCRIPTS
-
 function register_my_scripts() {
-  wp_deregister_script('jquery');
-  wp_register_script('jquery', THEME_DIR . "/node_modules/jquery/dist/jquery.min.js", array(),'3.2.1',false);
-  wp_register_script('foundation', THEME_DIR . "/node_modules/foundation-sites/dist/js/foundation.min.js", array('jquery'),'6.4.3',true);
-
-  wp_enqueue_script(array('jquery','foundation'));
+  wp_register_script('jQuery', THEME_DIR . "/node_modules/jquery/dist/jquery.min.js",null,null,false);
+  wp_register_script('foundation', THEME_DIR . "/node_modules/foundation-sites/dist/js/foundation.min.js", array('jquery'),null,true);
+  wp_enqueue_script(array('jQuery','foundation'));
 }
 
 // ENQUEUE STYLES
 
-function register_my_styles(){
+//function register_my_styles(){
 
-    wp_register_style( 'foundation-icon', THEME_DIR . '/fonts/foundation-icons.css', array(), '1', 'screen' );
-    wp_register_style( 'screen', THEME_DIR . '/stylesheets/screen.css', array(), '1', 'screen' );
-    wp_register_style( 'print', THEME_DIR . '/stylesheets/print.css', array(), '1', 'print' );
-    wp_register_style('foundation', THEME_DIR . "/css/foundation.min.css",array('main'),'6.4.3','screen');
-  wp_enqueue_style(array('foundation-icon','screen','print','foundation'));
-}
+//    wp_register_style( 'foundation-icon', THEME_DIR . '/fonts/foundation-icons.css', array(), '1', 'screen' );
+//    wp_register_style('foundation', THEME_DIR . "/css/foundation.min.css",array('main'),'6.4.3','screen');
+//    wp_register_style( 'screen', THEME_DIR . '/stylesheets/screen.css', array(), '1', 'screen' );
+//    wp_register_style( 'print', THEME_DIR . '/stylesheets/print.css', array(), '1', 'print' );
+//    wp_enqueue_style(array('foundation-icon','screen','print','foundation'));
+//}
 
-add_action('wp_print_scripts','register_my_scripts', 0);
-add_action('wp_print_styles', 'register_my_styles', 2);
+//add_action('wp_print_scripts','register_my_scripts', 0);
+//add_action('wp_print_styles', 'register_my_styles', 2);
 
 
 
@@ -87,6 +84,7 @@ include 'types/service.php';
 include 'types/location.php';
 include 'types/provider.php';
 include 'types/career.php';
+include 'types/mission.php';
 // include 'types/other.php';
 // include 'types/other.php';
 
@@ -226,10 +224,7 @@ function woocommerce_support() {
     add_theme_support( 'woocommerce' );
 }
 
-function pgthrottle_javascript_detection() {
-	echo "<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>\n";
-}
-add_action( 'wp_head', 'pgthrottle_javascript_detection', 0 );
+
 
 function pgthrottle_subcategory_hierarchy() {
     $category = get_queried_object();

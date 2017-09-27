@@ -18,11 +18,31 @@ header.site-header {
   border-top:1px solid $light-blue;
   border-bottom:1px solid $black;
   color:$white;
+  padding-top:0.5em;
+  padding-bottom:0.5em;
 
+  .grid-container>.grid-x >.small-4 {
+    border-left:1px solid $light-blue;
+    border-right:1px solid darken($dark-blue, 10%);
+    &:first-child {
+      border-left: 0;
+    }
+    &:last-child {
+      border-right:0;
+    }
+    &:hover i {
+      color:$white;
+    }
+    &:hover .intro-read {
+      background:transparent;
+      border:1px solid $white;
+    }
+  }
   i {
-
-    font-size:7em;
+    color:$light-blue;
+    font-size:6em;
     line-height: 1em;
+  @include transition(ease 500ms);
   }
   .intro-title {
     font-size:2em;
@@ -30,6 +50,7 @@ header.site-header {
   .intro-read {
       color:$black;
       font-size:0.825rem;
+      border: 1px solid transparent;
     }
 
 }
@@ -44,16 +65,6 @@ header.site-header {
 }
 
 
-// AutoComplete Search Box
-.autocomplete-suggestions {
-    text-align: left; cursor: default; border: 1px solid #ccc; border-top: 0; background: #fff; box-shadow: -1px 1px 3px rgba(0,0,0,.1);
-
-    /* core styles should not be changed */
-    position: absolute; display: none; z-index: 9999; max-height: 254px; overflow: hidden; overflow-y: auto; box-sizing: border-box;
-}
-.autocomplete-suggestion { position: relative; padding: 0 .6em; line-height: 23px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 1.02em; color: #333; }
-.autocomplete-suggestion b { font-weight: normal; color: #1f8dd6; }
-.autocomplete-suggestion.selected { background: #f0f0f0; }
 
 // Main Top Navigation
 
@@ -61,8 +72,11 @@ nav.site-navigation {
 
   li > a {
     color:$dark-gray;
-    font-size:1.2em;
+    font-size:1.1em;
   }
+  .dropdown.menu a {
+    padding: 1rem 1rem;
+}
 }
 
 
@@ -80,4 +94,10 @@ nav.site-navigation {
 
 .bg-light-gray {
   background:$light-gray;
+}
+
+// Sidebar
+
+.lensx-btn {
+
 }

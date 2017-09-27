@@ -62,6 +62,25 @@ get_header(); ?>
 				<?php get_template_part('includes/content'); ?>
 			</div>
 			<div class="cell auto">
+
+
+
+<p><button class="button lensx-btn" data-open="lensx"><img src="/wp-content/uploads/2015/03/lensex.jpg" alt = "VEI Lensx Video" class="th" /></button></p>
+<div class="reveal" id="lensx" data-reveal>
+  <h1>LensX</h1>
+	<iframe id="fancybox-frame" name="fancybox-frame1425997055730" frameborder="0" hspace="0" scrolling="no" src="http://eyemag.in/iEPwai"></iframe>
+	<p>For more information on LenSx call 804.287.2020</p>
+  <button class="close-button" data-close aria-label="Close modal" type="button">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+
+
+
+
+
+
+
 				<?php get_sidebar(); ?>
 			</div>
 		</div><!-- grid-x -->

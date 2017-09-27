@@ -3,6 +3,8 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+@import url(fonts/foundation-icons.css);
+@import url(fonts/stylesheet.css);
 /* line 5, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -173,6 +175,173 @@ ul.social-sprite li.instagram a {
   margin-left: 0;
 }
 
+/* -- WordPress Core Classes -- */
+/* =WordPress Core
+-------------------------------------------------------------- */
+/* line 4, ../sass/_main.scss */
+.alignnone {
+  margin: 0.5em 1em 1em 0;
+}
+
+/* line 8, ../sass/_main.scss */
+.aligncenter,
+div.aligncenter {
+  display: block;
+  margin: 0.5em auto 0.5em auto;
+}
+
+/* line 14, ../sass/_main.scss */
+.alignright {
+  float: right;
+  margin: 0.5em 0 1em 1em;
+}
+
+/* line 19, ../sass/_main.scss */
+.alignleft {
+  float: left;
+  margin: 0.5em 1em 1em 0;
+}
+
+/* line 24, ../sass/_main.scss */
+a img.alignright {
+  float: right;
+  margin: 0.5em 0 1em 1em;
+}
+
+/* line 29, ../sass/_main.scss */
+a img.alignnone {
+  margin: 0.5em 1em 1em 0;
+}
+
+/* line 33, ../sass/_main.scss */
+a img.alignleft {
+  float: left;
+  margin: 0.5em 1em 1em 0;
+}
+
+/* line 38, ../sass/_main.scss */
+a img.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 44, ../sass/_main.scss */
+.wp-caption {
+  background: #fefefe;
+  border: 1px solid #f0f0f0;
+  max-width: 96%;
+  /* Image does not overflow the content area */
+  padding: 0.5em 0.5em .875em;
+  text-align: center;
+}
+
+/* line 52, ../sass/_main.scss */
+.wp-caption.alignnone {
+  margin: 0.5em 1em 1em 0;
+}
+
+/* line 56, ../sass/_main.scss */
+.wp-caption.alignleft {
+  margin: 0.5em 1em 1em 0;
+}
+
+/* line 60, ../sass/_main.scss */
+.wp-caption.alignright {
+  margin: 0.5em 0 1em 1em;
+}
+
+/* line 64, ../sass/_main.scss */
+.wp-caption img {
+  border: 0 none;
+  height: auto;
+  margin: 0;
+  max-width: 98.5%;
+  padding: 0;
+  width: auto;
+}
+
+/* line 73, ../sass/_main.scss */
+.wp-caption p.wp-caption-text {
+  font-size: 80%;
+  line-height: auto;
+  margin: 0;
+  padding: 0 .5em .5em;
+}
+
+/* Text meant only for screen readers. */
+/* line 81, ../sass/_main.scss */
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+  white-space: nowrap;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+/* line 90, ../sass/_main.scss */
+.screen-reader-text:focus {
+  background-color: #fefefe;
+  border-radius: 3px;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+  clip: auto !important;
+  color: #0a0a0a;
+  display: block;
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: bold;
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 1em;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000;
+  /* Above WP toolbar. */
+}
+
+/* line 111, ../sass/_main.scss */
+button.radius, .button.radius, label.radius, .label.radius {
+  border-radius: 3px;
+}
+
+/* line 113, ../sass/_main.scss */
+button.round, .button.round, label.round, .label.round {
+  border-radius: 1000px;
+}
+
+/* line 117, ../sass/_main.scss */
+.embed-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  height: auto;
+}
+
+/* line 126, ../sass/_main.scss */
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* -- Fonts -- */
+/* -- Metaslider Plugin --*/
+/* line 143, ../sass/_main.scss */
+.metaslider ul.slides {
+  margin: 0;
+  list-style: none;
+}
+
+/* -- Home page -- */
 /* line 3, ../sass/_style.scss */
 header.site-header {
   padding-top: 1em;
@@ -192,82 +361,76 @@ header.site-header .button {
   border-top: 1px solid #64a9cd;
   border-bottom: 1px solid #0a0a0a;
   color: #fefefe;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
 }
-/* line 22, ../sass/_style.scss */
-#pg-intro i {
-  font-size: 7em;
-  line-height: 1em;
+/* line 24, ../sass/_style.scss */
+#pg-intro .grid-container > .grid-x > .small-4 {
+  border-left: 1px solid #64a9cd;
+  border-right: 1px solid #185576;
 }
 /* line 27, ../sass/_style.scss */
+#pg-intro .grid-container > .grid-x > .small-4:first-child {
+  border-left: 0;
+}
+/* line 30, ../sass/_style.scss */
+#pg-intro .grid-container > .grid-x > .small-4:last-child {
+  border-right: 0;
+}
+/* line 33, ../sass/_style.scss */
+#pg-intro .grid-container > .grid-x > .small-4:hover i {
+  color: #fefefe;
+}
+/* line 36, ../sass/_style.scss */
+#pg-intro .grid-container > .grid-x > .small-4:hover .intro-read {
+  background: transparent;
+  border: 1px solid #fefefe;
+}
+/* line 41, ../sass/_style.scss */
+#pg-intro i {
+  color: #64a9cd;
+  font-size: 6em;
+  line-height: 1em;
+  -webkit-transition: ease 500ms;
+  -moz-transition: ease 500ms;
+  -ms-transition: ease 500ms;
+  -o-transition: ease 500ms;
+  transition: ease 500ms;
+}
+/* line 47, ../sass/_style.scss */
 #pg-intro .intro-title {
   font-size: 2em;
 }
-/* line 30, ../sass/_style.scss */
+/* line 50, ../sass/_style.scss */
 #pg-intro .intro-read {
   color: #0a0a0a;
   font-size: 0.825rem;
+  border: 1px solid transparent;
 }
 
-/* line 40, ../sass/_style.scss */
+/* line 61, ../sass/_style.scss */
 .pg-search-wrapper input {
   min-height: 40px;
   margin: 0.25em 0;
 }
 
-/* line 48, ../sass/_style.scss */
-.autocomplete-suggestions {
-  text-align: left;
-  cursor: default;
-  border: 1px solid #ccc;
-  border-top: 0;
-  background: #fff;
-  box-shadow: -1px 1px 3px rgba(0, 0, 0, 0.1);
-  /* core styles should not be changed */
-  position: absolute;
-  display: none;
-  z-index: 9999;
-  max-height: 254px;
-  overflow: hidden;
-  overflow-y: auto;
-  box-sizing: border-box;
-}
-
-/* line 54, ../sass/_style.scss */
-.autocomplete-suggestion {
-  position: relative;
-  padding: 0 .6em;
-  line-height: 23px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  font-size: 1.02em;
-  color: #333;
-}
-
-/* line 55, ../sass/_style.scss */
-.autocomplete-suggestion b {
-  font-weight: normal;
-  color: #1f8dd6;
-}
-
-/* line 56, ../sass/_style.scss */
-.autocomplete-suggestion.selected {
-  background: #f0f0f0;
-}
-
-/* line 62, ../sass/_style.scss */
+/* line 73, ../sass/_style.scss */
 nav.site-navigation li > a {
   color: #555555;
-  font-size: 1.2em;
+  font-size: 1.1em;
+}
+/* line 77, ../sass/_style.scss */
+nav.site-navigation .dropdown.menu a {
+  padding: 1rem 1rem;
 }
 
-/* line 73, ../sass/_style.scss */
+/* line 87, ../sass/_style.scss */
 #pg-slideshow {
   max-height: 50vh;
   overflow: hidden;
 }
 
-/* line 81, ../sass/_style.scss */
+/* line 95, ../sass/_style.scss */
 .bg-light-gray {
   background: #eaf1f4;
 }
@@ -3651,7 +3814,7 @@ h6, .h6 {
   font-family: "Ubuntu", sans-serif;
   font-style: normal;
   font-weight: normal;
-  color: inherit;
+  color: #64a9cd;
   text-rendering: optimizeLegibility;
 }
 /* line 321, ../node_modules/foundation-sites/scss/typography/_base.scss */

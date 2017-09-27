@@ -18,15 +18,29 @@
     <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS2 Feed" href="<?php bloginfo('rss2_url'); ?>" />
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
     <link rel="profile" href="http://gmpg.org/xfn/11">
+
+    <!--=== Resources ===-->
+  
+    <link rel="stylesheet" type="text/css" href="<?php echo THEME_DIR; ?>/stylesheets/screen.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/motion-ui/1.1.1/motion-ui.min.css" /><!-- Animation Support for Foundation 6 - Motion UI -->
+    <link rel="stylesheet" type="text/css" href="<?php echo THEME_DIR; ?>/fonts/foundation-icons.css" />
+    <link rel="stylesheet" type="text/css" href="<?php echo THEME_DIR; ?>/stylesheets/print.css" />
+
+
+
+
+
+
+
+
+
+
+
     <!--=== TITLE ===-->
     <title><?php wp_title(); ?> - <?php bloginfo( 'name' ); ?></title>
 
     <!--=== WP_HEAD() ===-->
-    <script>
-    jQuery(document).ready(function ($) {
-    $(document).foundation();
-  });
-</script>
+
     <?php wp_head(); ?>
 
 </head>
@@ -42,7 +56,7 @@
       <div class="cell auto text-right">
           <button type="button" class="menu-icon" data-toggle="pg-mobile-nav"><span></span></button>
             <?php get_template_part('includes/social'); ?>
-              <a href="#" class="button radius phone-number">Call Now: 804-287-4200</a>
+              <a href="8042874200" class="button radius phone-number">Call Now: 804-287-4200</a>
 
           </div>
     </div>

@@ -18,7 +18,7 @@
     'labels'        => $labels,
     'description'   => 'Providers',
     'public'        => true,
-    'menu_icon'   => 'dashicons-admin-multisite',
+    'menu_icon'   => 'dashicons-businessman',
     'menu_position' => 4,
 	  'show_in_nav_menus' => true,
     'supports'      => array( 'title', 'editor', 'thumbnail', 'excerpt', 'comments' ),
