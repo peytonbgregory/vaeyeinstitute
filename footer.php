@@ -1,6 +1,6 @@
 <section id="prefooter-contact">
   <div class="grid-container">
-    <div class="grid-x align-middle text-center">
+    <div class="grid-x align-middle grid-padding-y text-center">
 
       <div class="cell auto">
         <div>Appts Richmond</div>
@@ -34,10 +34,37 @@
     </div>
   </div>
 </section>
-      <footer class="site-footer">
-        <div class="footer-navigation">
+      <footer class="site-footer bg-light-gray">
+        <div class="grid-container">
+        <div class="grid-x grid-margin-x grid-padding-y small-up-1 medium-up-4 large-up-4">
+          <div class="cell">
+            <div class="widget">
+              <h4 class="widget-title">Quick Links</h4>
+            <?php wp_nav_menu( array( 'theme_location' => 'footer-menu-first','menu_class' => 'vertical menu align-left icons icon-left' ) ); ?>
+            </div>
+            <?php //dynamic_sidebar('footer-first'); ?>
 
+          </div>
+          <div class="cell">
+            <div class="widget">
+              <h4 class="widget-title">Patient Information</h4>
+            <?php wp_nav_menu( array( 'theme_location' => 'footer-menu-second','menu_class' => 'vertical menu align-left icons icon-left' ) ); ?>
+          </div>
+            <?php //dynamic_sidebar('footer-second'); ?>
+          </div>
+          <div class="cell">
+            <div class="widget">
+              <h4 class="widget-title">Our Locations</h4>
+            <?php wp_nav_menu( array( 'theme_location' => 'footer-menu-third','menu_class' => 'vertical menu align-left icons icon-left' ) ); ?>
+          </div>
+            <?php  //dynamic_sidebar('footer-third'); ?>
+          </div>
+          <div class="cell">
+
+            <?php dynamic_sidebar('footer-fourth'); ?>
+          </div>
         </div>
+      </div>
       </footer>
     </div><!-- .site-wrapper -->
     <script src="<?php echo THEME_DIR; ?>/dist/js/jquery.min.js"></script>
@@ -67,4 +94,4 @@
   <script src="//www.livehelpnow.net/lhn/widgets/chatbutton/lhnchatbutton-current.min.js" id="lhnscript"></script> -->
   </body>
 </html>
-<?php wp_footer();?>
+<?php wp_footer();

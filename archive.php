@@ -1,14 +1,28 @@
 <?php get_header();?>
-	<section class="bg-light-gray <? echo pg_class_loop(); ?>" id="archive-wrapper">
-		<div class="grid-container">
-			<div class="grid-x grid-margin-y align-strech">
-				<div class="cell small-12 medium-8 large-9">
-					<?php get_template_part('includes/content'); ?>
-				</div>
-				<div class="cell auto">
-					<?php get_sidebar(); ?>
-				</div>
-			</div><!-- grid-x -->
-		</div><!-- grid-container -->
-	</section>
+
+
+
+<!--SERVICES! Load Template by Custom Post Type -->
+<?php if ( 'service' == get_post_type() ) {
+
+	get_template_part('includes/content','thumbnail','grid');
+
+// LOCATIONS! Load Template by Custom Post Type
+ } elseif ( 'location' == get_post_type() ) {
+				get_template_part('includes/content-thumbnail-grid');
+// PROVIDERS! Load Template by Custom Post Type
+ } elseif ( 'provider' == get_post_type() ) {
+				get_template_part('includes/content-archive-provider');
+// CAREERS! Load Template by Custom Post Type
+ } elseif ( 'career' == get_post_type() ) {
+				get_template_part('includes/content-thumbnail-grid');
+// MISSION! Load Template by Custom Post Type
+} elseif ( 'mission' == get_post_type() ) {
+				get_template_part('includes/content-thumbnail-grid');
+// EVERYTHING ELSE! Load Template by Custom Post Type -->
+ } else {
+			get_template_part('includes/content');
+ } ?>
+
+
 <?php get_footer();

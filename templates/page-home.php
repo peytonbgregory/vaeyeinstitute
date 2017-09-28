@@ -87,4 +87,4 @@ get_header(); ?>
 	</div><!-- grid-container -->
 </section>
 
-<?php get_footer();?>
+<?php get_footer();

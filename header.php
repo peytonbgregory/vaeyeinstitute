@@ -20,7 +20,7 @@
     <link rel="profile" href="http://gmpg.org/xfn/11">
 
     <!--=== Resources ===-->
-  
+
     <link rel="stylesheet" type="text/css" href="<?php echo THEME_DIR; ?>/stylesheets/screen.css" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/motion-ui/1.1.1/motion-ui.min.css" /><!-- Animation Support for Foundation 6 - Motion UI -->
     <link rel="stylesheet" type="text/css" href="<?php echo THEME_DIR; ?>/fonts/foundation-icons.css" />
@@ -64,7 +64,7 @@
 </header>
 <?php
 echo'<nav class="site-navigation"><div class="grid-container align-middle">
-<div class="grid-x grid-margin-x">';
+<div class="grid-x">';
 		wp_nav_menu(array(
       // 'container'       => 'div',
       // 'container_class' => 'menu-{menu slug}-container',
@@ -77,7 +77,7 @@ echo'<nav class="site-navigation"><div class="grid-container align-middle">
       // 'link_after'      => ,
       // 'depth'           => 0,
 	    	'container' => false,
-	    	'menu' => __( 'Header Menu', 'pgthrottle' ),
+	    	'menu' => 'Header Menu',
 	    	'menu_class' => 'dropdown menu',
 	    	'theme_location' => 'header-menu',
 	    	'items_wrap'      => '<ul id="%1$s" class="%2$s cell auto" data-dropdown-menu>%3$s</ul>',

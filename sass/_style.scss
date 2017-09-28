@@ -16,7 +16,7 @@ header.site-header {
 #pg-intro {
   background:$dark-blue;
   border-top:1px solid $light-blue;
-  border-bottom:1px solid $black;
+  border-bottom:1px solid darken($dark-blue, 10%);
   color:$white;
   padding-top:0.5em;
   padding-bottom:0.5em;
@@ -100,4 +100,25 @@ nav.site-navigation {
 
 .lensx-btn {
 
+}
+
+
+// Footer Section & menus
+
+footer.site-footer {
+  .menu a {
+    padding:0.5rem 0;
+    color:$dark-gray;
+  }
+  .wpcf7 { // Contact Forms
+    textarea {
+      max-height:5em;
+    }
+    .wpcf7-quiz-label {
+      float:left;
+    }
+    .wpcf7-quiz {
+      width:3em;
+    }
+  }
 }

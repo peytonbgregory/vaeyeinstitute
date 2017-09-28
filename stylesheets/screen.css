@@ -3,8 +3,8 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-@import url(fonts/foundation-icons.css);
-@import url(fonts/stylesheet.css);
+@import url(../fonts/foundation-icons.css);
+@import url(../fonts/stylesheet.css);
 /* line 5, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -359,7 +359,7 @@ header.site-header .button {
 #pg-intro {
   background: #2074a1;
   border-top: 1px solid #64a9cd;
-  border-bottom: 1px solid #0a0a0a;
+  border-bottom: 1px solid #185576;
   color: #fefefe;
   padding-top: 0.5em;
   padding-bottom: 0.5em;
@@ -433,6 +433,24 @@ nav.site-navigation .dropdown.menu a {
 /* line 95, ../sass/_style.scss */
 .bg-light-gray {
   background: #eaf1f4;
+}
+
+/* line 109, ../sass/_style.scss */
+footer.site-footer .menu a {
+  padding: 0.5rem 0;
+  color: #555555;
+}
+/* line 114, ../sass/_style.scss */
+footer.site-footer .wpcf7 textarea {
+  max-height: 5em;
+}
+/* line 117, ../sass/_style.scss */
+footer.site-footer .wpcf7 .wpcf7-quiz-label {
+  float: left;
+}
+/* line 120, ../sass/_style.scss */
+footer.site-footer .wpcf7 .wpcf7-quiz {
+  width: 3em;
 }
 
 /*! normalize-scss | MIT/GPLv2 License | bit.ly/normalize-scss */

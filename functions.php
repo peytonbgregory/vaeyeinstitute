@@ -51,35 +51,29 @@ function register_my_scripts() {
 
 
 
-
+// Register Custom Menus
 function pgthrottle_register_menus() {
-	register_nav_menus(
-    array (
-     'header-menu', __( 'Header Menu','pgthrottle' ),
-     'footer-menu', __( 'Footer Menu','pgthrottle' )
+	register_nav_menus( array (
+     'header-menu' => 'Header Menu',
+     'footer-menu' => 'Footer Menu',
+     'footer-menu-first' => 'Footer Menu - First',
+     'footer-menu-second' => 'Footer Menu - Second',
+     'footer-menu-third' => 'Footer Menu - Third',
+     'footer-menu-fourth' => 'Footer Menu - Fourth'
      )
   );
 }
-
-//Add Menu to theme setup hook
-add_action( 'after_setup_theme', 'pgthrottle_theme_setup' );
-
-	add_action( 'init', 'pgthrottle_register_menus' );
-
-	//Theme Support
-	add_theme_support( 'menus' );
+add_action( 'after_setup_theme', 'pgthrottle_register_menus' );
 
 
-
-// AutoComplete JS Search Feature
-// AutoComplete JS Search Feature
-// AutoComplete JS Search Feature
-
-
-
+// Add foundation menu Classes
+function add_classes_pg($classes, $item, $args) {
+  $classes[] = 'vertical menu align-right';
+  return $classes;
+}
+add_filter('nav_menu_css_class','add_classes_pg',1,3);
 
 // Enable or Disable Custom Post Types
-
 include 'types/service.php';
 include 'types/location.php';
 include 'types/provider.php';

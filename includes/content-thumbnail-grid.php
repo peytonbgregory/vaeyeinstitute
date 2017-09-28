@@ -1,4 +1,4 @@
-<?php /* Basic two colum Layout with for archive and category pages with post thumbnails */ ?>
+<?php /* Grid Layout with hover effects for archive and category pages */ ?>
 <section class="grid-container" id="thumbnail-grid">
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
       <div class="grid-x grid-margin-x" id="post-<?php the_ID(); ?>">
