@@ -80,7 +80,7 @@ echo'<nav class="site-navigation"><div class="grid-container align-middle">
 	    	'menu' => 'Header Menu',
 	    	'menu_class' => 'dropdown menu',
 	    	'theme_location' => 'header-menu',
-	    	'items_wrap'      => '<ul id="%1$s" class="%2$s cell auto" data-dropdown-menu>%3$s</ul>',
+	    	'items_wrap'      => '<ul id="%1$s" class="%2$s cell auto text-left" data-dropdown-menu>%3$s</ul>',
 	    	//Recommend setting this to false, but if you need a fallback...
 	    	'fallback_cb' => 'f6_topbar_menu_fallback',
 	       'walker' => new F6_TOPBAR_MENU_WALKER(),

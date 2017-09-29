@@ -1,33 +1,33 @@
 <section id="prefooter-contact">
   <div class="grid-container">
-    <div class="grid-x align-middle grid-padding-y text-center">
+    <div class="grid-x align-middle grid-padding-y text-center small-up-1 medium-up-3 large-up-6">
 
-      <div class="cell auto">
+      <div class="cell">
         <div>Appts Richmond</div>
         <a href="tel:">(804) 287-4216</a>
       </div>
 
-      <div class="cell auto">
+      <div class="cell">
         <div>Richmond Toll Free</div>
         <a href="tel:">(800) 348-2393</a>
       </div>
 
-      <div class="cell auto">
+      <div class="cell">
         <div>After Hours</div>
         <a href="tel:">(804) 764-7759</a>
       </div>
 
-      <div class="cell auto">
+      <div class="cell">
         <div>Fax Number</div>
         <a href="tel:">(804) 287-4210</a>
       </div>
 
-      <div class="cell auto">
+      <div class="cell">
         <div>Referring Provider</div>
         <a href="tel:">(804) 287-4700</a>
       </div>
 
-      <div class="cell auto">
+      <div class="cell">
         <div>  Referring Provider Fax</div>
         <a href="tel:">(804) 282-1967</a>
       </div>
@@ -41,6 +41,9 @@
             <div class="widget">
               <h4 class="widget-title">Quick Links</h4>
             <?php wp_nav_menu( array( 'theme_location' => 'footer-menu-first','menu_class' => 'vertical menu align-left icons icon-left' ) ); ?>
+<hr>
+            <div class="calliout large"><img class="mdvc-logo" src="/wp-content/uploads/2017/09/mdvc-logo.png" width="160" alt="MD Value Care" />
+            </div>
             </div>
             <?php //dynamic_sidebar('footer-first'); ?>
 
@@ -60,8 +63,9 @@
             <?php  //dynamic_sidebar('footer-third'); ?>
           </div>
           <div class="cell">
-
-            <?php dynamic_sidebar('footer-fourth'); ?>
+            <h4 class="widget-title">Contact Us</h4>
+            <?php echo do_shortcode('[contact-form-7 id="259" title="Contact Form Complete"]'); ?>
+            <?php //dynamic_sidebar('footer-fourth'); ?>
           </div>
         </div>
       </div>
