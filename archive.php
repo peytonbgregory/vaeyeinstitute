@@ -5,7 +5,7 @@
 <!--SERVICES! Load Template by Custom Post Type -->
 <?php if ( 'service' == get_post_type() ) {
 
-	get_template_part('includes/content','thumbnail','grid');
+	get_template_part('includes/content-thumbnail-grid');
 
 // LOCATIONS! Load Template by Custom Post Type
  } elseif ( 'location' == get_post_type() ) {

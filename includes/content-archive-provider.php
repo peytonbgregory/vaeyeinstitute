@@ -1,21 +1,22 @@
-<?php // Provider Archive Page Template
-$proheadsuit = get_field( "provider_headshot_suit" );
-$proheatcoat = get_field( "provider_headshot_coat" );
-$promodalvideo = get_field( "provider_modal_video" );
-$protitles = get_field( "provider_title" );
-$proservices = get_field( "provider_services" );
-$prolocations = get_field( "provider_locations" );
-$promissions = get_field( "provider_missions" );
-$proabout = get_field( "provider_about" );
-$proedu = get_field( "provider_education" );
-$proassoc = get_field( "professional_associations" );
-$proquote = get_field( "patient_quote" );
-$proquotename = get_field( "patient_name" );
-?>
+
 
 <section class="grid-container" id="thumbnail-grid">
     <div class="grid-x small-up-3 medium-up-4 large-up-5">
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+  <?php // Provider Archive Page Template
+  $proheadsuit = get_field( "provider_headshot_suit" );
+  $proheatcoat = get_field( "provider_headshot_coat" );
+  $promodalvideo = get_field( "provider_modal_video" );
+  $protitles = get_field( "provider_title" );
+  $proservices = get_field( "provider_services" );
+  $prolocations = get_field( "provider_locations" );
+  $promissions = get_field( "provider_missions" );
+  $proabout = get_field( "provider_about" );
+  $proedu = get_field( "provider_education" );
+  $proassoc = get_field( "professional_associations" );
+  $proquote = get_field( "patient_quote" );
+  $proquotename = get_field( "patient_name" );
+  ?>
     <div class="cell">
     <div class="grid-container" id="thumbnail-grid">
       <div class="grid-x text-center" id="post-<?php the_ID(); ?>">
@@ -45,7 +46,7 @@ $proquotename = get_field( "patient_name" );
             </div>
 </div>
 
-          </div>
+
       </div><!-- grid-x -->
     </div>
   </div>
