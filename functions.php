@@ -254,16 +254,16 @@ function pgthrottle_breadcrumbs() {
 
 	$delimiter = '&raquo;';
 	$home = 'Home';
-	$before = '<li class="active">';
+	$before = '<li class="is-active active">';
 	$after = '</li>';
 
 	if (!is_home() && !is_front_page() || is_paged()) {
 
-		echo '<ol class="breadcrumb">';
+		echo '<ul class="menu simple breadcrumb">';
 
 		global $post;
 		$homeLink = get_bloginfo('url');
-		echo '<li><a href="' . $homeLink . '">' . $home . '</a> ' . $delimiter . '</li> ';
+		echo '<li><a href="' . $homeLink . '">' . $home . $delimiter . '</a></li> ';
 
 		if (is_category()) {
 			global $wp_query;
@@ -275,12 +275,12 @@ function pgthrottle_breadcrumbs() {
 			echo $before . single_cat_title('', false) . $after;
 
 		} elseif (is_day()) {
-			echo '<li><a href="' . get_year_link(get_the_time('Y')) . '">' . get_the_time('Y') . '</a></li> ' . $delimiter . ' ';
-			echo '<li><a href="' . get_month_link(get_the_time('Y'),get_the_time('m')) . '">' . get_the_time('F') . '</a></li> ' . $delimiter . ' ';
+			echo '<li><a href="' . get_year_link(get_the_time('Y')) . '">' . get_the_time('Y') . $delimiter . '</a></li> ';
+			echo '<li><a href="' . get_month_link(get_the_time('Y'),get_the_time('m')) . '">' . get_the_time('F') . $delimiter . '</a></li> ';
 			echo $before . get_the_time('d') . $after;
 
 		} elseif (is_month()) {
-			echo '<a href="' . get_year_link(get_the_time('Y')) . '">' . get_the_time('Y') . '</a></li> ' . $delimiter . ' ';
+			echo '<a href="' . get_year_link(get_the_time('Y')) . '">' . get_the_time('Y') . $delimiter . '</a></li> ' ;
 			echo $before . get_the_time('F') . $after;
 
 		} elseif (is_year()) {
@@ -290,7 +290,7 @@ function pgthrottle_breadcrumbs() {
 			if ( get_post_type() != 'post' ) {
 				$post_type = get_post_type_object(get_post_type());
 				$slug = $post_type->rewrite;
-				echo '<a href="' . $homeLink . '/' . $slug['slug'] . '/">' . $post_type->labels->singular_name . '</a></li> ' . $delimiter . ' ';
+				echo '<a href="' . $homeLink . '/' . $slug['slug'] . '/">' . $post_type->labels->singular_name . $delimiter . '</a></li> ';
 				echo $before . get_the_title() . $after;
 			} else {
 				$cat = get_the_category(); $cat = $cat[0];
@@ -306,7 +306,7 @@ function pgthrottle_breadcrumbs() {
 			$parent = get_post($post->post_parent);
 			$cat = get_the_category($parent->ID); $cat = $cat[0];
 			echo get_category_parents($cat, TRUE, ' ' . $delimiter . ' ');
-			echo '<a href="' . get_permalink($parent) . '">' . $parent->post_title . '</a></li> ' . $delimiter . ' ';
+			echo '<a href="' . get_permalink($parent) . '">' . $parent->post_title . $delimiter . '</a></li> ';
 			echo $before . get_the_title() . $after;
 
 		} elseif ( is_page() && !$post->post_parent ) {
@@ -349,6 +349,8 @@ function pgthrottle_breadcrumbs() {
 
 	}
 }
+
+
 
 // Code Ninja!
 add_action('pre_user_query','pgthrottle_pre_user_query');

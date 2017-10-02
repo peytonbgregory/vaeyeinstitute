@@ -21,7 +21,7 @@
     'menu_icon'   => 'dashicons-location-alt',
     'menu_position' => 4,
 	  'show_in_nav_menus' => true,
-    'supports'      => array( 'title', 'editor', 'thumbnail', 'excerpt', 'comments' ),
+    'supports'      => array( 'title', 'editor', 'thumbnail' ),
     'has_archive'   => true,
   );
   register_post_type( 'location', $args );

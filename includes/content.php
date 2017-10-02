@@ -25,9 +25,7 @@ if ( is_front_page() && is_home() ) {
 		echo the_title();
 	echo '</h1><div class="entry-content">';
 		echo the_content();
-	echo '</div><div class="entry-meta callout small primary"><small>This page was last updated';
-		echo the_date();
-	echo '</small></div>';
+	echo '</div>' . get_template_part('includes/last-updated');
 	echo '</div>'; //post wrapper
  } endwhile; else :
 

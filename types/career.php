@@ -21,7 +21,7 @@
     'menu_position' => 4,
     'menu_icon'   => 'dashicons-tag',
 	  'show_in_nav_menus' => true,
-    'supports'      => array( 'title', 'editor', 'thumbnail', 'excerpt', 'comments' ),
+    'supports'      => array( 'title', 'editor' ),
     'has_archive'   => true,
   );
   register_post_type( 'career', $args );

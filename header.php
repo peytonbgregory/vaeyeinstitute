@@ -89,3 +89,29 @@ echo'<nav class="site-navigation"><div class="grid-container align-middle">
 
   get_search_form();
 echo'</div></div></nav>'; ?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<?php echo '<section id="breadcrumb">';
+if ( is_front_page() && is_home() ) {
+// Blank
+ } elseif ( is_front_page()) {
+// Blank
+ } elseif ( is_home()) {
+// Blank
+ } else {
+  ?> <div class="grid-container"><div class="grid-x"><div class="cell small-12"><?php pgthrottle_breadcrumbs(); ?></div></div></div>
+<? }
+  echo '</section>'; ?>

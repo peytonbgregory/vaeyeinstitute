@@ -109,6 +109,7 @@ while ( have_posts() ) : the_post(); ?>
       </div>
     </div>
   </div>
+  <?php get_template_part('includes/last-updated'); ?>
   <?php if( $proquote ) { ?>
   <div class="grid-container">
       <div class="grid-x grid-margin-x grid-margin-y align-strech">
