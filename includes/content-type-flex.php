@@ -1,97 +1,48 @@
-<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-<div class="grid-container">
-  <div class="grid-x grid-margin-x">
-    <div class="cell small-12 medium-8 large-8">
-      <h1 class="entry-title"> <?php the_title(); ?><h1>
-      <div class="entry-content"><?php the_content(); ?></div>
+
+<section class="flex-content">
+  <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+    <div class="grid-container">
+      <div class="grid-x grid-margin-x">
+        <div class="cell small-12"><?php // pgthrottle_breadcrumbs(); ?></div>
+        <div class="cell small-12 medium-8 large-8">
+
+        <h1 class="entry-title"><?php the_title(); ?></h1>
+        <div class="entry-content"> <?php the_content(); ?></div>
+
+
+
+      </div>
+      <div class="cell auto">
+        <?php // get_sidebar(); ?>
+      </div>
+
+      </div>
     </div>
-    <div class="cell auto">
-      <?php get_sidebar(); ?>
-    </div>
-  </div>
-</div> <!-- grid container -->
 
 
+<?php // FLEX CONTENT - Content Section ?>
 
+          <?php
 
+          // check if the flexible content field has rows of data
+          if( have_rows('flex_content') ):
 
+               // loop through the rows of data
+              while ( have_rows('flex_content') ) : the_row();
+              // Load Flex Content Section
+              if( get_row_layout() == 'content_section_full' ): get_template_part('includes/flex/section-content-full');
+              // Load 2 Column Flex Content
+              elseif( get_row_layout() == 'content_section_col' ): get_template_part('includes/flex/section-content-col');
+              // Load Flex Accordion Section
+              elseif( get_row_layout() == 'accordion_section' ): get_template_part('includes/flex/section-accordion');
+              // Load Flex Staff Content
+              elseif( get_row_layout() == 'staff_section' ): get_template_part('includes/flex/section-staff');
 
+             endif; endwhile;  else :
 
+              // no layouts found
 
+          endif; // Flex Layouts Ends?>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <?php
-
-  // check if the flexible content field has rows of data
-  if( have_rows('section') ): ?>
-
-  <?     // loop through the rows of data
-      while ( have_rows('section') ) : the_row();
-
-          if( get_row_layout() == 'content' ): ?>
-
-          <?php if( the_sub_field('columns') == 'one' ): ?>
-            <section class="flex-content">
-              <div class="grid-container">
-                <div class="grid-x grid-margin-x">
-                      	<div class="cell small-12"><h2 class="entry-title"><?php the_sub_field('heading'); ?></h2></div>
-                        <div class="cell small-12"><?php the_sub_field('text_one'); ?></div>
-
-                    </div>
-              </div>
-            </section>
-          <?php endif; ?>
-          <?php if( the_sub_field('columns') == 'two' ): ?>
-            <section class="flex-content">
-              <div class="grid-container">
-                <div class="grid-x grid-margin-x">
-                      	<div class="cell small-12"><h2 class="entry-title"><?php the_sub_field('heading'); ?></h2></div>
-                        <div class="cell small-12 medium-6 large-6"><?php the_sub_field('text_one'); ?></div>
-                        <div class="cell small-12 medium-6 large-6"><?php the_sub_field('text_two'); ?></div>
-                    </div>
-              </div>
-            </section>
-          <?php endif; ?>
-
-
-        <?php  endif; endwhile;
-  else :
-      // no layouts found
-    ?>   <?
-endif;
-
-
-      // Loop ends
-    endwhile; else : ?>
-
-<?php endif; wp_reset_query (); ?>
+  <?php endwhile; else : endif; wp_reset_query (); // Loop Ends ?>
+</section>
