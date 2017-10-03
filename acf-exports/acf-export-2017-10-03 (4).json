@@ -1,0 +1,70 @@
+[
+    {
+        "key": "group_59cbbf6170d2d",
+        "title": "Services & Procedures",
+        "fields": [
+            {
+                "key": "field_59cbbfa035396",
+                "label": "Doctors with this Specialty",
+                "name": "doctors_specialty",
+                "type": "page_link",
+                "instructions": "Please select all providers with this Specialty",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                },
+                "post_type": [
+                    "provider"
+                ],
+                "taxonomy": [],
+                "allow_null": 0,
+                "allow_archives": 1,
+                "multiple": 1
+            },
+            {
+                "key": "field_59cbc032f0206",
+                "label": "Service Video",
+                "name": "service_video",
+                "type": "oembed",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                },
+                "width": "",
+                "height": ""
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "service"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": [
+            "excerpt",
+            "custom_fields",
+            "discussion",
+            "comments",
+            "format",
+            "page_attributes",
+            "send-trackbacks"
+        ],
+        "active": 1,
+        "description": ""
+    }
+]

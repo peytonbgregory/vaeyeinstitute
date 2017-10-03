@@ -1,0 +1,275 @@
+[
+    {
+        "key": "group_59cab7e46939f",
+        "title": "Our Providers \/ Doctors",
+        "fields": [
+            {
+                "key": "field_59cab802b14e5",
+                "label": "Provider Headshot (Suit)",
+                "name": "provider_headshot_suit",
+                "type": "image",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "25",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "url",
+                "preview_size": "thumbnail",
+                "library": "all",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": ""
+            },
+            {
+                "key": "field_59cab83cb14e6",
+                "label": "Provider Headshot (Lab Coat)",
+                "name": "provider_headshot_coat",
+                "type": "image",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "25",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "url",
+                "preview_size": "thumbnail",
+                "library": "all",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": ""
+            },
+            {
+                "key": "field_59cab962b14ec",
+                "label": "Provider Modal Video",
+                "name": "provider_modal_video",
+                "type": "oembed",
+                "instructions": "This video will open in a pop up modal window after clicking \"Watch Video\" under the providers bio.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                },
+                "width": "",
+                "height": ""
+            },
+            {
+                "key": "field_59cab865b14e8",
+                "label": "Provider Title",
+                "name": "provider_title",
+                "type": "checkbox",
+                "instructions": "Select all titles that apply to the provider.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "25",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "M.D.": "M.D.",
+                    "F.A.C.S.": "F.A.C.S.",
+                    "Ph.D.": "Ph.D.",
+                    "O.D.": "O.D.",
+                    "B.S.H.S.": "B.S.H.S.",
+                    "C.O.M.T.": "C.O.M.T.",
+                    "": ""
+                },
+                "allow_custom": 1,
+                "save_custom": 1,
+                "default_value": [],
+                "layout": "vertical",
+                "toggle": 0,
+                "return_format": "value"
+            },
+            {
+                "key": "field_59cab92ab14ea",
+                "label": "Provider About",
+                "name": "provider_about",
+                "type": "wysiwyg",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "66",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "tabs": "all",
+                "toolbar": "full",
+                "media_upload": 0,
+                "delay": 1
+            },
+            {
+                "key": "field_59ce805bec7d6",
+                "label": "Provider General",
+                "name": "provider_general",
+                "type": "wysiwyg",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "33",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "tabs": "all",
+                "toolbar": "full",
+                "media_upload": 0,
+                "delay": 1
+            },
+            {
+                "key": "field_59cab94ab14eb",
+                "label": "Provider Education",
+                "name": "provider_education",
+                "type": "wysiwyg",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "33",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "tabs": "all",
+                "toolbar": "full",
+                "media_upload": 0,
+                "delay": 1
+            },
+            {
+                "key": "field_59cbaaf06d586",
+                "label": "Professional Associations",
+                "name": "professional_associations",
+                "type": "wysiwyg",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "33",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "tabs": "all",
+                "toolbar": "full",
+                "media_upload": 0,
+                "delay": 1
+            },
+            {
+                "key": "field_59cbf0ad3911f",
+                "label": "Patient Name",
+                "name": "patient_name",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "25",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_59cbbc925c40e",
+                "label": "Patient Quote",
+                "name": "patient_quote",
+                "type": "textarea",
+                "instructions": "Patient Testimonial displayed at the bottom of the page. Do NOT include quotations in this box.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "75",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "maxlength": "",
+                "rows": 4,
+                "new_lines": ""
+            },
+            {
+                "key": "field_59ce43ce4f9ec",
+                "label": "Relationship",
+                "name": "provider_relationship",
+                "type": "relationship",
+                "instructions": "Select all site content related to this provider",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "105",
+                    "class": "primary",
+                    "id": ""
+                },
+                "post_type": [
+                    "service",
+                    "mission",
+                    "location"
+                ],
+                "taxonomy": [],
+                "filters": [
+                    "search",
+                    "post_type",
+                    "taxonomy"
+                ],
+                "elements": [
+                    "featured_image"
+                ],
+                "min": "",
+                "max": "",
+                "return_format": "object"
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "provider"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": [
+            "the_content",
+            "excerpt",
+            "custom_fields",
+            "discussion",
+            "comments",
+            "author",
+            "format",
+            "featured_image",
+            "categories",
+            "tags",
+            "send-trackbacks"
+        ],
+        "active": 1,
+        "description": ""
+    }
+]
