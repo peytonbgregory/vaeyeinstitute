@@ -30,9 +30,7 @@
                // loop through the rows of data
               while ( have_rows('flex_content') ) : the_row();
               // Load Flex Content Section
-              if( get_row_layout() == 'content_section_full' ): get_template_part('includes/flex/section-content-full');
-              // Load 2 Column Flex Content
-              elseif( get_row_layout() == 'content_section_col' ): get_template_part('includes/flex/section-content-col');
+              if( get_row_layout() == 'content_section' ): get_template_part('includes/flex/section-content');
               // Load Flex Accordion Section
               elseif( get_row_layout() == 'accordion_section' ): get_template_part('includes/flex/section-accordion');
               // Load Flex Staff Content

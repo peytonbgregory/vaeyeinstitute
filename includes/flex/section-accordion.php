@@ -1,3 +1,4 @@
+<section id="flex-section-accordion">
 <div class="grid-container">
   <div class="grid-x grid-margin-x">
     <div class="cell small-12">
@@ -16,3 +17,4 @@ while ( have_rows('accordion_group') ) : the_row(); ?>
 </div>
 </div>
 </div>
+</section>

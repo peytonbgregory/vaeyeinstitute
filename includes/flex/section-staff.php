@@ -1,3 +1,4 @@
+<section id="flex-section-staff">
 <div class="grid-container">
   <div class="grid-x grid-margin-x">
  <div class="cell small-12 medium-12 large-12">
@@ -21,3 +22,4 @@
 
               <?php endwhile; ?>  </div>
           <?php else : endif; ?>  </div>
+</section>

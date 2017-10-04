@@ -14,13 +14,13 @@ get_template_part('includes/content-type-service');
 			get_template_part('includes/content-type-provider');
 // CAREERS! Load Template by Custom Post Type
  } elseif ( 'career' == get_post_type() ) {
-			get_template_part('includes/content-type-flex');
+			get_template_part('includes/content-type-career');
 // MISSION! Load Template by Custom Post Type
 } elseif ( 'mission' == get_post_type() ) {
 			get_template_part('includes/content-type-mission');
 // EVERYTHING ELSE! Load Template by Custom Post Type -->
  } else {
-			get_template_part('includes/content-type-service', 'includes/content');
+			get_template_part('includes/content-type-flex', 'includes/content');
  } ?>
 
 
