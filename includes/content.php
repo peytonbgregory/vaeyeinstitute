@@ -1,6 +1,8 @@
-<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
+<?php
+echo '<section class="default-content"><div class="grid-container"><div class="grid-x grid-margin-x">';
+ if ( have_posts() ) : while ( have_posts() ) : the_post();
 
-echo '<div class="post-wrapper">';
+echo '<div class=" cell post-wrapper">';
 if ( is_front_page() && is_home() ) {
 
 	echo '<div class="entry-content">';
@@ -25,10 +27,11 @@ if ( is_front_page() && is_home() ) {
 		echo the_title();
 	echo '</h1><div class="entry-content">';
 		echo the_content();
-	echo '</div>' . get_template_part('includes/last-updated');
 	echo '</div>'; //post wrapper
  } endwhile; else :
 
+echo '</div>';
 
-
-endif; wp_reset_query (); ?>
+endif;
+echo '</div></div></section>';
+wp_reset_query (); ?>

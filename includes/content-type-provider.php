@@ -38,7 +38,7 @@ while ( have_posts() ) : the_post(); ?>
 <?php if( $prorelations ): ?>
   <div class="entry-specialties">
   <h3>Specialties</h3>
-    <ul class="simple menu">
+    <ul class="vertical menu text-left">
       <?php foreach( $prorelations as $post): // variable must be called $post (IMPORTANT) ?>
           <?php setup_postdata($post); ?>
           <li class="<?php echo get_post_type(); ?>"><a href="<?php the_permalink(); ?>"><i class="fi-checkbox"></i> <?php the_title(); ?></a></li>
@@ -61,11 +61,11 @@ while ( have_posts() ) : the_post(); ?>
     </div>
   </div>
 
-        <?php if( $proheadsuit ): ?>
+
         <div class="cell small-4">
-        	<img src="<?=$proheadsuit ?>" class="img-provider" title="Virginia Eye Institute Provider - <?php the_title(); ?> <?php the_field('provider_title'); ?>" alt="Virginia Eye Institute Provider - <?php the_title(); ?> <?php the_field('provider_title'); ?>" />
+        	<img src="<?php if ( get_field( 'provider_headshot_coat' )) : the_field( 'provider_headshot_coat' ); else : the_field( 'provider_headshot_suit' ); endif; ?>" class="img-provider" title="Virginia Eye Institute Provider - <?php the_title(); ?> <?php the_field('provider_title'); ?>" alt="Virginia Eye Institute Provider - <?php the_title(); ?> <?php the_field('provider_title'); ?>" />
         </div>
-        <?php endif; ?>
+      
 
     </div>
   </div>
@@ -74,11 +74,11 @@ while ( have_posts() ) : the_post(); ?>
 
 
   <div class="grid-container">
-      <div class="grid-x grid-padding-y align-strech">
+      <div class="grid-x grid-padding-y grid-margin-x align-strech">
         <div class="cell small-8">
 
 
-  <ul class="accordion" data-responsive-accordion-tabs="accordion medium-tabs large-tabs">
+  <ul class="accordion" data-responsive-accordion-tabs="accordion medium-tabs primary large-tabs">
     <?php if( $progen ) { ?>
       <li class="accordion-item is-active" data-accordion-item>
         <a href="#" class="accordion-title"><h6 class="subheader"><i class="fi-info"></i> General Info</h6></a>
@@ -104,12 +104,18 @@ while ( have_posts() ) : the_post(); ?>
   </ul>
 
       </div>
-      <div class="small-4">
+      <div class="cell small-4">
+
+
+
+<div class="lensx-wrapper <?php if( $prorelations ): foreach( $prorelations as $post): setup_postdata($post); the_title(); echo ' '; endforeach; wp_reset_postdata(); endif; ?>">
+<?php get_template_part('includes/parts/widget-lensx'); ?>
+</div>
         <?php get_sidebar(); ?>
       </div>
     </div>
   </div>
-  <?php get_template_part('includes/last-updated'); ?>
+  <?php get_template_part('includes/parts/updated'); ?>
   <?php if( $proquote ) { ?>
   <div class="grid-container">
       <div class="grid-x grid-margin-x grid-margin-y align-strech">
@@ -145,7 +151,7 @@ echo '</section>'; // Page Ends ?>
     </div>
 
   </div>
-</div>
+
 <button class="close-button" data-close aria-label="Close modal" type="button">
   <span aria-hidden="true">&times;</span>
 </button>

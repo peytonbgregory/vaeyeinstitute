@@ -49,12 +49,12 @@
 <div class="site-wrapper">
 <header class="site-header">
   <div class="grid-container">
-    <div class="grid-x grid-margin-x align-middle">
-      <div class="cell small-4">
+    <div class="grid-x grid-margin-x grid-padding-y align-middle">
+      <div class="cell small-8 small-offset-2 medium-4 medium-offset-0 large-offset-0 large-3">
         <img src="<?php echo THEME_DIR; ?>/imgs/virginia-eye-logo.svg" />
       </div>
-      <div class="cell auto text-right">
-          <button type="button" class="menu-icon" data-toggle="pg-mobile-nav"><span></span></button>
+      <div class="cell small-12 medium-8 large-9 medium-text-right small-text-center">
+
             <?php get_template_part('includes/social'); ?>
               <a href="8042874200" class="button radius phone-number">Call Now: 804-287-4200</a>
 

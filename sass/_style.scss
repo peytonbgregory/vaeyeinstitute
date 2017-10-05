@@ -1,8 +1,7 @@
 
 
 header.site-header {
-  padding-top:1em;
-  padding-bottom: 1em;
+
   .button {
     margin: 0;
     padding: 0.45em;
@@ -14,11 +13,16 @@ header.site-header {
 // Breadcrumbs
 
 #breadcrumb {
-  background:$light-blue;
-
-  li {
-    padding:0.5em; 
+  background:$medium-gray;
+  border-bottom:1px solid $light-blue;
+  margin-bottom:1em;
+ul.breadcrumbs {
+  margin:0.5em 1em;
+  a {
+    color:$dark-blue;
   }
+}
+
 }
 
 // Home Page Styles
@@ -142,8 +146,11 @@ nav.site-navigation {
 }
 
 // Sidebar
-
-.lensx-btn {
+.lensx-wrapper {
+  display:none;
+}
+.lensx-wrapper.Laser-Assisted {
+    display:block;
 
 }
 

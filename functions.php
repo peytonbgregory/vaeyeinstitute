@@ -41,6 +41,15 @@ function register_my_scripts() {
 
 
 
+// Custom Thumbnails
+add_image_size( 'provider_thumbnail', 270, 370, true );
+add_image_size( 'header_full', 1200, 400, true );
+add_image_size( 'header_medium', 800, 300, true );
+
+
+
+
+
 
 
 
@@ -260,14 +269,14 @@ add_filter( 'category_template', 'pgthrottle_subcategory_hierarchy' );
 add_filter( 'breadcrumbs_template', 'pgthrottle_breadcrumbs' );
 function pgthrottle_breadcrumbs() {
 
-	$delimiter = '&raquo;';
+	$delimiter = '';
 	$home = 'Home';
-	$before = '<li class="is-active active">';
+	$before = '<li>';
 	$after = '</li>';
 
 	if (!is_home() && !is_front_page() || is_paged()) {
 
-		echo '<ul class="menu simple breadcrumb">';
+		echo '<ul class="breadcrumbs">';
 
 		global $post;
 		$homeLink = get_bloginfo('url');
@@ -298,7 +307,7 @@ function pgthrottle_breadcrumbs() {
 			if ( get_post_type() != 'post' ) {
 				$post_type = get_post_type_object(get_post_type());
 				$slug = $post_type->rewrite;
-				echo '<a href="' . $homeLink . '/' . $slug['slug'] . '/">' . $post_type->labels->singular_name . $delimiter . '</a></li> ';
+				echo '<li><a href="' . $homeLink . '/' . $slug['slug'] . '/">' . $post_type->labels->singular_name . $delimiter . '</a></li> ';
 				echo $before . get_the_title() . $after;
 			} else {
 				$cat = get_the_category(); $cat = $cat[0];
@@ -314,7 +323,7 @@ function pgthrottle_breadcrumbs() {
 			$parent = get_post($post->post_parent);
 			$cat = get_the_category($parent->ID); $cat = $cat[0];
 			echo get_category_parents($cat, TRUE, ' ' . $delimiter . ' ');
-			echo '<a href="' . get_permalink($parent) . '">' . $parent->post_title . $delimiter . '</a></li> ';
+			echo '<li><a href="' . get_permalink($parent) . '">' . $parent->post_title . $delimiter . '</a></li> ';
 			echo $before . get_the_title() . $after;
 
 		} elseif ( is_page() && !$post->post_parent ) {
@@ -325,7 +334,7 @@ function pgthrottle_breadcrumbs() {
 			$breadcrumbs = array();
 			while ($parent_id) {
 				$page = get_page($parent_id);
-				$breadcrumbs[] = '<a href="' . get_permalink($page->ID) . '">' . get_the_title($page->ID) . '</a></li>';
+				$breadcrumbs[] = '<li><a href="' . get_permalink($page->ID) . '">' . get_the_title($page->ID) . '</a></li>';
 				$parent_id  = $page->post_parent;
 			}
 			$breadcrumbs = array_reverse($breadcrumbs);
