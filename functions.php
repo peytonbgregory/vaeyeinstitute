@@ -42,9 +42,14 @@ function register_my_scripts() {
 
 
 // Custom Thumbnails
-add_image_size( 'provider_thumbnail', 270, 370, true );
-add_image_size( 'header_full', 1200, 400, true );
-add_image_size( 'header_medium', 800, 300, true );
+add_image_size( 'provider-thumbnail', 300, 400, true );
+add_image_size( 'provider-thumbnail-crop', 300, 400);
+add_image_size( 'provider-full-crop', 370, 500, true );
+add_image_size( 'provider-full', 370, 500 );
+add_image_size( 'gallery-thumbnail', 300, 200, true );
+add_image_size( 'gallery-full-crop', 1200, 1200, true );
+add_image_size( 'gallery-full', 1200, 1200 );
+add_image_size( 'header-full', 1200, 400, true );
 
 
 
