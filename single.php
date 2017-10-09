@@ -8,7 +8,7 @@ get_template_part('includes/content-type-service');
 
 // LOCATIONS! Load Template by Custom Post Type
  } elseif ( 'location' == get_post_type() ) {
-			get_template_part('includes/content-type-flex');
+			get_template_part('includes/content-type-location');
       get_template_part('includes/parts/updated');
 // PROVIDERS! Load Template by Custom Post Type
  } elseif ( 'provider' == get_post_type() ) {

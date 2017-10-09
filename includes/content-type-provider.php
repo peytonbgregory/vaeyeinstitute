@@ -55,6 +55,7 @@ while ( have_posts() ) : the_post(); ?>
           <div class="small-6">
           <?php if( $promodalvideo ) { // Watch Video Button
             echo '<div><button class="button large" data-open="providerVideo">Watch Doctor Video <i class="fi-play"></i></button></div>';
+          } else { echo '<div><button class="button large disabled">Provider Video Coming Soon <i class="fi-info"></i></button></div>';
           } ?>
         </div>
       </div>
@@ -65,7 +66,7 @@ while ( have_posts() ) : the_post(); ?>
         <div class="cell small-4">
         	<img src="<?php if ( get_field( 'provider_headshot_coat' )) : the_field( 'provider_headshot_coat' ); else : the_field( 'provider_headshot_suit' ); endif; ?>" class="img-provider" title="Virginia Eye Institute Provider - <?php the_title(); ?> <?php the_field('provider_title'); ?>" alt="Virginia Eye Institute Provider - <?php the_title(); ?> <?php the_field('provider_title'); ?>" />
         </div>
-      
+
 
     </div>
   </div>
@@ -156,4 +157,4 @@ echo '</section>'; // Page Ends ?>
   <span aria-hidden="true">&times;</span>
 </button>
 </div>
-<?php } else { echo 'Provider Video Not Available';} ?>
+<?php } ?>

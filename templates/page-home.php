@@ -12,7 +12,7 @@ get_header(); ?>
 <section id="pg-intro">
 	<div class="grid-container">
 		<div class="grid-x small-up-1 medium-up-3 large-up-3">
-			<div class="cell">
+			<div class="cell vert-div">
 				<div class="grid-container">
 					<div class="grid-x grid-margin-x align-middle">
 						<div class="cell shrink">
@@ -20,12 +20,12 @@ get_header(); ?>
 						</div>
 						<div class="cell auto">
 							<div class="intro-title">Mobile Services</div>
-								<a href="#" class="intro-read text-right button">Read More...</a>
+								<a href="/patient-info/mobile-pre-check/" class="intro-read text-right primary hollow button">Sign up for text alerts! <i class="fi fi-link"></i></a>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="cell">
+			<div class="cell vert-div">
 				<div class="grid-container">
 					<div class="grid-x grid-margin-x align-middle">
 						<div class="cell shrink">
@@ -33,12 +33,12 @@ get_header(); ?>
 						</div>
 						<div class="cell auto">
 							<div class="intro-title">Patient Reviews</div>
-							<a href="#" class="intro-read text-right button">Read More...</a>
+							<a href="/reviews/" class="intro-read text-right hollow primary button">Read Patient Reviews! <i class="fi fi-link"></i></a>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="cell">
+			<div class="cell vert-div">
 				<div class="grid-container">
 					<div class="grid-x grid-margin-x align-middle">
 						<div class="cell shrink">
@@ -46,7 +46,7 @@ get_header(); ?>
 						</div>
 						<div class="cell auto">
 							<div class="intro-title">Patient Portal</div>
-							<a href="https://vaeye.followmyhealth.com/Login/Home/Index?authproviders=0&returnArea=PatientAccess#/default" target="_blank" title="Virginia Eye Patient Portal" class="intro-read text-right button">Read More...</a>
+							<a href="https://vaeye.followmyhealth.com/Login/Home/Index?authproviders=0&returnArea=PatientAccess#/default" target="_blank" title="Virginia Eye Patient Portal" class="intro-read text-right button primary hollow">Go to the Patient Portal! <i class="fi fi-link"></i></a>
 						</div>
 					</div>
 				</div>
@@ -60,11 +60,11 @@ get_header(); ?>
 		<div class="grid-x grid-margin-x align-middle">
 			<div class="cell small-12 medium-8 large-8">
 				<?php get_template_part('includes/content'); ?>
-			</div></div>
+			</div>
 			<div class="cell auto">
 
 
-			
+
 <?php get_template_part('includes/parts/widget-lensx'); ?>
 
 

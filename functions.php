@@ -8,6 +8,12 @@ remove_action('wp_head', 'wp_generator');
 require_once ('includes/foundation-walker-top.php');
 
 
+function my_acf_init() {
+
+	acf_update_setting('google_api_key', 'AIzaSyAl_f3fyVkXgG2jwTRRDxsKtiL8eZ5rsp8');
+}
+
+add_action('acf/init', 'my_acf_init');
 
 // ENQUEUE SCRIPTS
 function register_my_scripts() {
@@ -210,6 +216,7 @@ function browser_body_class($classes) {
 	if($is_iphone) $classes[] = 'iphone';
 	return $classes;
 }
+
 
 
 // Added Support for Post Thumbnails

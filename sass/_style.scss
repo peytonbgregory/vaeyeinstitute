@@ -12,6 +12,8 @@ header.site-header {
 
 // Breadcrumbs
 
+
+
 #breadcrumb {
   background:$medium-gray;
   border-bottom:1px solid $light-blue;
@@ -25,6 +27,10 @@ ul.breadcrumbs {
 
 }
 
+.home #breadcrumb, .single-location #breadcrumb, .single-provider #breadcrumb {
+  margin-bottom:0;
+}
+
 // Home Page Styles
 
 #pg-intro {
@@ -35,7 +41,7 @@ ul.breadcrumbs {
   padding-top:0.5em;
   padding-bottom:0.5em;
 
-  .grid-container>.grid-x >.small-4 {
+  .grid-container>.grid-x >.vert-div {
     border-left:1px solid $light-blue;
     border-right:1px solid darken($dark-blue, 10%);
     &:first-child {
@@ -46,26 +52,36 @@ ul.breadcrumbs {
     }
     &:hover i {
       color:$white;
+      border-color:$white;
     }
-    &:hover .intro-read {
-      background:transparent;
-      border:1px solid $white;
+    &:hover .button {
+      color:$white;
+      border-color:$white;
+      i {
+        width:auto;
+        font-size:1em;
+      }
     }
+
+  }
+  .button {
+    @include transition(ease 250ms);
+    i {
+      width:0;
+      font-size:0em;
+    }
+
   }
   i {
     color:$light-blue;
     font-size:6em;
     line-height: 1em;
-  @include transition(ease 500ms);
+  @include transition(ease 250ms);
   }
   .intro-title {
     font-size:2em;
 }
-  .intro-read {
-      color:$black;
-      font-size:0.825rem;
-      border: 1px solid transparent;
-    }
+
 
 }
 
@@ -136,6 +152,44 @@ nav.site-navigation {
 #pg-slideshow {
   max-height: 50vh;
   overflow: hidden;
+  text-shadow: 1px 1px 1px #000;
+
+  .slider-text-big {
+    font-size:3.2em;
+  }
+  .slider-text-big-2 {
+    font-size:2.2em;
+  }
+  .slider-text-name span {
+    font-size: 2.2em;
+      width: auto;
+      background: rgba(255, 255, 255, 0.7);
+      border: 1px solid $medium-gray;
+      border-radius: 100px;
+      text-shadow: 0 0 0;
+      text-align: center;
+
+      display: inline-block;
+      padding: .5rem 2rem;
+    color: $dark-blue;
+    small {
+      color:$light-blue;
+      font-size: 70%;
+    bottom: 3px;
+    position: relative;
+    }
+
+  }
+  .slider-button {
+    padding:0.5em 1.5em;
+    border:1px solid $dark-blue;
+    @include transition (ease 250ms);
+    &:hover {
+      padding:1em 2em;
+      font-size:1.2em;
+      box-shadow:2px 2px 2px $dark-gray;
+    }
+  }
 }
 
 // Section Background Colors
@@ -301,5 +355,16 @@ footer.site-footer {
         color:$dark-blue;
       }
     }
+  }
+}
+
+
+
+// Locations Page
+.location-content {
+  color:$white;
+  background:$dark-blue;
+  h1, h2, h3, h4, h5, h6 {
+    color:$light-blue;
   }
 }
