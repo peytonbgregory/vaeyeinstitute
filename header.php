@@ -57,7 +57,11 @@
 
             <?php get_template_part('includes/social'); ?>
               <a href="8042874200" class="button radius phone-number">Call Now: 804-287-4200</a>
+              <?php // $num = get_field('phone_number', 'theme_settings');  // given
+						//$formatted = "(".substr($num,0,3).") ".substr($num,3,3)."-".substr($num,6); ?>
 
+
+					 <a class="button" href="tel:<?php the_field('phone_number'); ?>">Call Now <?php echo $formatted ?></a>
           </div>
     </div>
   </div>

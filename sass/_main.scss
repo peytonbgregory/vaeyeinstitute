@@ -156,6 +156,21 @@ a img.aligncenter {
   text-overflow: ellipsis;
 }
 
+ul.multi {
+	 @include breakpoint(small) { -webkit-column-count: 1; /* Chrome, Safari, Opera */
+    -moz-column-count: 1; /* Firefox */
+    column-count: 1;}
+	 @include breakpoint(medium) { 
+	-webkit-column-count: 2; /* Chrome, Safari, Opera */
+    -moz-column-count: 2; /* Firefox */
+    column-count: 2;}
+	 @include breakpoint(large) { 
+		 -webkit-column-count: 2; /* Chrome, Safari, Opera */
+    -moz-column-count: 2; /* Firefox */
+    column-count: 2;}
+	
+}
+
 .acf-map {
 	width: 100%;
 	height: 400px;

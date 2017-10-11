@@ -6,7 +6,7 @@
       <div class="grid-x grid-margin-x">
         <?php
         $image = get_field('header_image');
-        $size = 'hfull'; // (thumbnail, medium, large, full or custom size)
+        $size = 'full'; // (thumbnail, medium, large, full or custom size)
         if( $image ) {
         echo '<div class="small-12 medium-12 large-12">';
         	 echo wp_get_attachment_image( $image, $size );

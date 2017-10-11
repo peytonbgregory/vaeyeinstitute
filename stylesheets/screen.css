@@ -339,6 +339,35 @@ a img.aligncenter {
 }
 
 /* line 159, ../sass/_main.scss */
+ul.multi {
+  -webkit-column-count: 1;
+  /* Chrome, Safari, Opera */
+  -moz-column-count: 1;
+  /* Firefox */
+  column-count: 1;
+}
+@media print, screen and (min-width: 40em) {
+  /* line 159, ../sass/_main.scss */
+  ul.multi {
+    -webkit-column-count: 2;
+    /* Chrome, Safari, Opera */
+    -moz-column-count: 2;
+    /* Firefox */
+    column-count: 2;
+  }
+}
+@media print, screen and (min-width: 64em) {
+  /* line 159, ../sass/_main.scss */
+  ul.multi {
+    -webkit-column-count: 2;
+    /* Chrome, Safari, Opera */
+    -moz-column-count: 2;
+    /* Firefox */
+    column-count: 2;
+  }
+}
+
+/* line 174, ../sass/_main.scss */
 .acf-map {
   width: 100%;
   height: 400px;
@@ -347,12 +376,12 @@ a img.aligncenter {
 }
 
 /* fixes potential theme css conflict */
-/* line 167, ../sass/_main.scss */
+/* line 182, ../sass/_main.scss */
 .acf-map img {
   max-width: inherit !important;
 }
 
-/* line 172, ../sass/_main.scss */
+/* line 187, ../sass/_main.scss */
 button.animate {
   box-shadow: inset 0 0 0 2px #64a9cd;
   font-size: inherit;
@@ -360,7 +389,7 @@ button.animate {
   position: relative;
   vertical-align: middle;
 }
-/* line 185, ../sass/_main.scss */
+/* line 200, ../sass/_main.scss */
 button.animate::before, button.animate::after {
   box-sizing: inherit;
   content: '';
@@ -369,42 +398,42 @@ button.animate::before, button.animate::after {
   height: 100%;
 }
 
-/* line 195, ../sass/_main.scss */
+/* line 210, ../sass/_main.scss */
 .draw-blue {
   transition: color 0.25s;
 }
-/* line 198, ../sass/_main.scss */
+/* line 213, ../sass/_main.scss */
 .draw-blue::before, .draw-blue::after {
   border: 2px solid transparent;
   width: 0;
   height: 0;
 }
-/* line 207, ../sass/_main.scss */
+/* line 222, ../sass/_main.scss */
 .draw-blue::before {
   top: 0;
   left: 0;
 }
-/* line 213, ../sass/_main.scss */
+/* line 228, ../sass/_main.scss */
 .draw-blue::after {
   bottom: 0;
   right: 0;
 }
-/* line 218, ../sass/_main.scss */
+/* line 233, ../sass/_main.scss */
 .draw-blue:hover {
   color: #2074a1;
 }
-/* line 223, ../sass/_main.scss */
+/* line 238, ../sass/_main.scss */
 .draw-blue:hover::before, .draw-blue:hover::after {
   width: 100%;
   height: 100%;
 }
-/* line 229, ../sass/_main.scss */
+/* line 244, ../sass/_main.scss */
 .draw-blue:hover::before {
   border-top-color: #2074a1;
   border-right-color: #2074a1;
   transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
 }
-/* line 237, ../sass/_main.scss */
+/* line 252, ../sass/_main.scss */
 .draw-blue:hover::after {
   border-bottom-color: #2074a1;
   border-left-color: #2074a1;
