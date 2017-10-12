@@ -96,7 +96,7 @@ add_action( 'after_setup_theme', 'pgthrottle_register_menus' );
 
 // Add foundation menu Classes
 function add_classes_pg($classes, $item, $args) {
-  $classes[] = 'vertical menu align-right';
+  $classes[] = 'menu';
   return $classes;
 }
 add_filter('nav_menu_css_class','add_classes_pg',1,3);
@@ -411,4 +411,4 @@ if( function_exists('acf_add_options_page') ) {
 
 
 // Loads Optimizations
-// require 'includes/seo.php';
+// require 'includes/parts/seo.php';

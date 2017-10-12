@@ -55,7 +55,7 @@
       </div>
       <div class="cell small-12 medium-8 large-9 medium-text-right small-text-center">
 
-            <?php get_template_part('includes/social'); ?>
+            <?php get_template_part('includes/parts/social'); ?>
               <a href="8042874200" class="button radius phone-number">Call Now: 804-287-4200</a>
               <?php // $num = get_field('phone_number', 'theme_settings');  // given
 						//$formatted = "(".substr($num,0,3).") ".substr($num,3,3)."-".substr($num,6); ?>
