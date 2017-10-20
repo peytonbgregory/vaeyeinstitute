@@ -1,30 +1,33 @@
 /*
-Error: File to import not found or unreadable: compass/reset.
+Error: File to import not found or unreadable: util/util.
        Load paths:
          /Applications/Adobe Dreamweaver CC 2017/Configuration/SassFrameworks/bourbon
          /Applications/Adobe Dreamweaver CC 2017/Configuration/SassFrameworks/neat
          /Applications/Adobe Dreamweaver CC 2017/Configuration/SassFrameworks/base
-        on line 6 of /Applications/MAMP/htdocs/virginiaeyeinstitute/wp-content/themes/vaeyeinstitute/sass/screen.scss
-
-1: /* Welcome to Compass.
-2:  * In this file you should write your main styles. (or centralize your imports)
-3:  * Import this file using the following HTML or equivalent:
-4:  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> *\/
-5: 
-6: @import "compass/reset";
-7: @import "settings";
-8: @import "foundation";
-9: @import "mixin";
-10: @import "social";
-11: @import "main";
+        on line 63 of /Applications/MAMP/htdocs/VaEye/wp-content/themes/vaeyeinstitute/sass/_settings.scss
+        from line 7 of /Applications/MAMP/htdocs/VaEye/wp-content/themes/vaeyeinstitute/sass/screen.scss
 
 Backtrace:
-/Applications/MAMP/htdocs/virginiaeyeinstitute/wp-content/themes/vaeyeinstitute/sass/screen.scss:6
+/Applications/MAMP/htdocs/VaEye/wp-content/themes/vaeyeinstitute/sass/_settings.scss:63
+/Applications/MAMP/htdocs/VaEye/wp-content/themes/vaeyeinstitute/sass/screen.scss:7
 /Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/tree/import_node.rb:67:in `rescue in import'
 /Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/tree/import_node.rb:45:in `import'
 /Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/tree/import_node.rb:28:in `imported_file'
 /Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/tree/import_node.rb:37:in `css_import?'
 /Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:311:in `visit_import'
+/Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/stack.rb:79:in `block in with_base'
+/Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/stack.rb:115:in `with_frame'
+/Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/stack.rb:79:in `with_base'
+/Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:326:in `block (2 levels) in visit_import'
+/Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:326:in `map'
+/Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:326:in `block in visit_import'
+/Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/stack.rb:88:in `block in with_import'
+/Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/stack.rb:115:in `with_frame'
+/Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/stack.rb:88:in `with_import'
+/Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:323:in `visit_import'
 /Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/tree/visitors/base.rb:36:in `visit'
 /Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
 /Applications/Adobe Dreamweaver CC 2017/Adobe Dreamweaver CC 2017.app/Contents/Resources/gems/rubygems/gems/sass-3.4.19/lib/sass/stack.rb:79:in `block in with_base'
@@ -56,4 +59,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: File to import not found or unreadable: compass/reset.\A        Load paths:\A          /Applications/Adobe Dreamweaver CC 2017/Configuration/SassFrameworks/bourbon\A          /Applications/Adobe Dreamweaver CC 2017/Configuration/SassFrameworks/neat\A          /Applications/Adobe Dreamweaver CC 2017/Configuration/SassFrameworks/base\A         on line 6 of /Applications/MAMP/htdocs/virginiaeyeinstitute/wp-content/themes/vaeyeinstitute/sass/screen.scss\A \A 1: /* Welcome to Compass.\A 2:  * In this file you should write your main styles. (or centralize your imports)\A 3:  * Import this file using the following HTML or equivalent:\A 4:  * <link href=\"/stylesheets/screen.css\" media=\"screen, projection\" rel=\"stylesheet\" type=\"text/css\" /> */\A 5: \A 6: @import \"compass/reset\";\A 7: @import \"settings\";\A 8: @import \"foundation\";\A 9: @import \"mixin\";\A 10: @import \"social\";\A 11: @import \"main\";"; }
+  content: "Error: File to import not found or unreadable: util/util.\A        Load paths:\A          /Applications/Adobe Dreamweaver CC 2017/Configuration/SassFrameworks/bourbon\A          /Applications/Adobe Dreamweaver CC 2017/Configuration/SassFrameworks/neat\A          /Applications/Adobe Dreamweaver CC 2017/Configuration/SassFrameworks/base\A         on line 63 of /Applications/MAMP/htdocs/VaEye/wp-content/themes/vaeyeinstitute/sass/_settings.scss\A         from line 7 of /Applications/MAMP/htdocs/VaEye/wp-content/themes/vaeyeinstitute/sass/screen.scss"; }

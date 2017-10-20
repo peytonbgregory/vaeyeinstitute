@@ -47,12 +47,12 @@
           <p>Thank you for considering the Virginia Eye Institute as a prospective employer of choice in the Richmond area. We are complimented by your interest and look forward to talking with you. Virginia Eye Institute is an equal opportunity employer.</p>
         </div>
 <h3>Contact Us</h3>
-If you enjoy working in a fast-paced environment where service excellence comes first, please complete an:
+<p>If you enjoy working in a fast-paced environment where service excellence comes first, please complete the online appliaction listed below:</p>
 
-<div class="button-group">
-<a class="button primary" href="http://www.vaeye.com/employment-application/" target="_blank" rel="noopener">Online Application</a>
+<div class="button-group expanded">
+<a class="button primary" href="/employment-application/" target="_blank" rel="noopener">Online Application</a>
 
-<a class="button primary" href="http://www.vaeye.com/category/job-openings/" target="_blank" rel="noopener">View Job Openings</a>
+<a class="button primary" href="/career/" target="_blank" rel="noopener">View Job Openings</a>
 </div>
 
 <div class="callout">For additional information, please contact:
@@ -62,7 +62,7 @@ If you enjoy working in a fast-paced environment where service excellence comes 
 400 Westhampton Station
 Richmond, Virginia 23226</address>
 <strong>Fax:</strong> (804) 287.4210
-<strong>Phone:</strong> (804) 287.4268
+	<strong>Phone:</strong> <a href="tel:8042874268">(804) 287.4268</a>
 <strong>Email:</strong> <a href="mailto:resumes@vaeye.com">resumes@vaeye.com</a></div>
 </div>
 <div class="callout">

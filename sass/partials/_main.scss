@@ -1,0 +1,788 @@
+// Foundations Backgorund colors
+
+.primary-bg {
+	background-color: $primary-color;
+}
+.secondary-bg {
+	background-color: $secondary-color;
+}
+.success-bg {
+	background-color: $success-color;
+}
+.warning-bg {
+	background-color: $warning-color;
+}
+.alert-bg {
+	background-color: $alert-color;
+}
+.white-bg {
+	background-color: $white;
+}
+.light-gray-bg {
+	background-color: $light-gray;
+}
+.medium-gray-bg {
+	background-color: $medium-gray;
+}
+.dark-gray-bg {
+	background-color: $dark-gray;
+}
+.black-bg {
+	background-color: $black;
+}
+
+
+/* -- WordPress Core Classes -- */
+/* =WordPress Core
+-------------------------------------------------------------- */
+.alignnone {
+    margin: 0.5em 1em 1em 0;
+}
+
+.aligncenter,
+div.aligncenter {
+    display: block;
+    margin: 0.5em auto 0.5em auto;
+}
+
+.alignright {
+    float:right;
+    margin: 0.5em 0 1em 1em;
+}
+
+.alignleft {
+    float: left;
+    margin: 0.5em 1em 1em 0;
+}
+
+img.alignright {
+    float: right;
+    margin: 0.5em 0 1em 1em;
+}
+
+img.alignnone {
+    margin: 0.5em 1em 1em 0;
+}
+
+img.alignleft {
+    float: left;
+    margin: 0.5em 1em 1em 0;
+}
+
+img.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+} 
+
+.wp-caption {
+    background: $white;
+    border: 1px solid #f0f0f0;
+    max-width: 96%; /* Image does not overflow the content area */
+    padding: 0.5em 0.5em .875em;
+    text-align: center;
+}
+
+.wp-caption.alignnone {
+    margin: 0.5em 1em 1em 0;
+}
+
+.wp-caption.alignleft {
+    margin: 0.5em 1em 1em 0;
+}
+
+.wp-caption.alignright {
+    margin: 0.5em 0 1em 1em;
+}
+
+.wp-caption img {
+    border: 0 none;
+    height: auto;
+    margin: 0;
+    max-width: 98.5%;
+    padding: 0;
+    width: auto;
+}
+
+.wp-caption p.wp-caption-text {
+    font-size: 80%;
+    line-height: auto;
+    margin: 0;
+    padding: 0 .5em .5em;
+}
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+        white-space: nowrap;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+
+.screen-reader-text:focus {
+	background-color: $body-background;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	color: $body-font-color;
+	display: block;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 1em;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000; /* Above WP toolbar. */
+}
+
+
+
+// Responsive Video Embed from ACF
+    .embed-container {
+    		position: relative;
+    		padding-bottom: 56.25%;
+    		height: 0;
+    		overflow: hidden;
+    		max-width: 100%;
+    		height: auto;
+    	}
+
+    	.embed-container iframe,
+    	.embed-container object,
+    	.embed-container embed {
+    		position: absolute;
+    		top: 0;
+    		left: 0;
+    		width: 100%;
+    		height: 100%;
+    	}
+
+/* -- Fonts -- */
+
+// @import '../fonts/foundation-icons.css';
+// @import '../fonts/stylesheet.css';
+
+/* -- Metaslider Plugin --*/
+
+.metaslider ul.slides {
+  margin:0;
+  list-style: none;
+}
+
+
+ul.social-sprite li {
+	float: left;
+	list-style: none outside none;
+	border: none
+}
+
+ul.social-sprite li a {
+	background-image: url(../../imgs/mini-social-icons.png);
+	background-repeat: no-repeat;
+	background-size: auto 96px;
+	border: 0 none;
+	color: #fff;
+	direction: ltr;
+	display: block;
+	height: 32px;
+	overflow: hidden;
+	text-align: left;
+	text-decoration: none;
+	text-indent: -999em;
+	transition: all .2s ease 0;
+	width: 32px;
+	margin-left: 0px;
+}
+
+.ie7 ul.social-sprite li a,.ie8 ul.social-sprite li a {
+	background-image: url(../../imgs/mini-social-icons.png);
+}
+
+ul.social-sprite li.facebook a {
+	background-position: 0 -32px
+}
+
+ul.social-sprite li.googleplus a {
+	background-position: -96px -32px
+}
+
+ul.social-sprite li.rss a {
+	background-position: -192px -32px
+}
+
+ul.social-sprite li.twitter a {
+	background-position: -256px -32px
+}
+
+ul.social-sprite li.youtube a {
+	background-position: -320px -32px
+}
+
+ul.social-sprite li.pinterest a {
+	background-position: -160px -32px
+}
+
+ul.social-sprite li.linkedin a {
+	background-position: -128px -32px
+}
+
+ul.social-sprite li.instagram a {
+	background-position: -288px -32px;
+}
+
+
+#social-media {
+	display:inline-block;
+	vertical-align: middle;
+.social-sprite {
+	overflow: hidden;
+	float: none;
+	margin:0;
+	li {
+		margin-left:5px;
+		&:first-child {
+			margin-left:0;
+		}
+}
+}
+}
+
+
+// Truncate Text
+.truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@mixin truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+ul.multi {
+	 @include breakpoint(small) { -webkit-column-count: 1; /* Chrome, Safari, Opera */
+    -moz-column-count: 1; /* Firefox */
+    column-count: 1;}
+	 @include breakpoint(medium) { 
+	-webkit-column-count: 2; /* Chrome, Safari, Opera */
+    -moz-column-count: 2; /* Firefox */
+    column-count: 2;}
+	 @include breakpoint(large) { 
+		 -webkit-column-count: 2; /* Chrome, Safari, Opera */
+    -moz-column-count: 2; /* Firefox */
+    column-count: 2;}
+	
+}
+
+.acf-map {
+	width: 100%;
+	height: 400px;
+	border: #ccc solid 1px;
+	margin: 20px 0;
+}
+
+/* fixes potential theme css conflict */
+.acf-map img {
+   max-width: inherit !important;
+}
+
+// Button Animations
+
+
+// Draw
+
+
+// Basic styles
+.button-animate {
+  background: none;
+  border: 0;
+  box-sizing: border-box;
+  margin: 1em;
+  padding: 1em 2em;
+  
+  // Using inset box-shadow instead of border for sizing simplicity
+  box-shadow: inset 0 0 0 2px transparent;
+  color: inherit;
+  font-size: inherit;
+  font-weight: 700;
+
+  // Required, since we're setting absolute on pseudo-elements
+  position: relative;
+  vertical-align: middle;
+
+  &::before,
+  &::after {
+    box-sizing: inherit;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.draw {
+    transition: color 0.25s;
+
+  &::before,
+  &::after {
+    // Set border to invisible, so we don't see a 4px border on a 0x0 element before the transition starts
+    border: 2px solid transparent;
+    width: 0;
+    height: 0;
+  }
+
+  // This covers the top & right borders (expands right, then down)
+  &::before {
+    top: 0;
+    left: 0;
+  }
+
+  // And this the bottom & left borders (expands left, then up)
+  &::after {
+    bottom: 0;
+    right: 0;
+  }
+  
+  &:hover {
+    color: $white;
+  }
+
+  // Hover styles
+  &:hover::before,
+  &:hover::after {
+    width: 100%;
+    height: 100%;
+  }
+
+  &:hover::before {
+    border-top-color: $white; // Make borders visible
+    border-right-color: $white;
+    transition:
+      width 0.25s ease-out, // Width expands first
+      height 0.25s ease-out 0.25s; // And then height
+  }
+
+  &:hover::after {
+    border-bottom-color: $white; // Make borders visible
+    border-left-color: $white;
+    transition:
+      border-color 0s ease-out 0.5s, // Wait for ::before to finish before showing border
+      width 0.25s ease-out 0.5s, // And then exanding width
+      height 0.25s ease-out 0.75s; // And finally height
+  }
+}
+ 
+// Inherits from .draw
+.meet {
+  
+  &:hover {
+    color: $primary-color;
+  }
+
+  // Start ::after in same position as ::before
+  &::after {
+    top: 0;
+    left: 0;
+  }
+
+  // Change colors
+  &:hover::before {
+    border-top-color: $primary-color;
+    border-right-color: $primary-color;
+  }
+
+  &:hover::after {
+    border-bottom-color: $primary-color;
+    border-left-color: $primary-color;
+    transition: // Animate height first, then width
+      height 0.25s ease-out,
+      width 0.25s ease-out 0.25s;
+  }
+
+}
+
+// Does not inherit
+.center {
+  &:hover {
+    color: $primary-color;
+  }
+
+  // Set up base styles, we're going to scale instead of animating width/height
+  &::before,
+  &::after {
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transform-origin: center; // Ensure scaling is done from the center (expands outwards)
+  }
+
+  // scale3d(<scale-horizontal>, <scale-vertical>, <scale-depth>);
+  &::before {
+    border-top: 2px solid $primary-color;
+    border-bottom: 2px solid $primary-color;
+    transform: scale3d(0,1,1); // Shrink only width
+  }
+
+  &::after {
+    border-left: 2px solid $primary-color;
+    border-right: 2px solid $primary-color;
+    transform: scale3d(1,0,1); // Shrink only height
+  }
+
+  &:hover::before,
+  &:hover::after {
+    transform: scale3d(1,1,1); // Show full-size
+    transition: transform 0.5s;
+  }
+}
+
+// Border spins around element
+// ::before holds three borders that appear separately, one at a time
+// ::after holds one border that spins around to cover ::before's borders, making their appearance seem smooth
+
+.spin {
+  width: 5em;
+  height: 5em;
+  padding: 0;
+  
+  &:hover {
+    color: $primary-color;
+  }
+
+  &::before,
+  &::after {
+    top: 0;
+    left: 0;
+  }
+
+  &::before {
+    border: 2px solid transparent; // We're animating border-color again
+  }
+
+  &:hover::before {
+    border-top-color: $primary-color; // Show borders
+    border-right-color: $primary-color;
+    border-bottom-color: $primary-color;
+
+    transition:
+      border-top-color 0.15s linear, // Stagger border appearances
+      border-right-color 0.15s linear 0.10s,
+      border-bottom-color 0.15s linear 0.20s;
+  }
+
+  &::after {
+    border: 0 solid transparent; // Makes border thinner at the edges? I forgot what I was doing
+  }
+
+  &:hover::after {
+    border-top: 2px solid $primary-color; // Shows border
+    border-left-width: 2px; // Solid edges, invisible borders
+    border-right-width: 2px; // Solid edges, invisible borders
+    transform: rotate(270deg); // Rotate around circle
+    transition:
+      transform 0.4s linear 0s,
+      border-left-width 0s linear 0.35s; // Solid edge post-rotation
+  }
+}
+
+.circle {
+  border-radius: 100%;
+  box-shadow: none;
+    
+  &::before,
+  &::after {
+    border-radius: 100%;
+  }
+}
+
+.thick {
+  color: $primary-color;
+
+  &:hover {
+    color: #fff;
+    font-weight: 700;
+  }
+
+  &::before {
+    border: 2.5em solid transparent;
+    z-index: -1;
+  }
+
+  &::after {
+    mix-blend-mode: color-dodge;
+    z-index: -1;
+  }
+
+  &:hover::before {
+    background: $primary-color;
+    border-top-color: $primary-color;
+    border-right-color: $primary-color;
+    border-bottom-color: $primary-color;
+    transition:
+      background 0s linear 0.4s,
+      border-top-color 0.15s linear,
+      border-right-color 0.15s linear 0.15s,
+      border-bottom-color 0.15s linear 0.25s;
+  }
+
+  &:hover::after {
+    border-top: 2.5em solid $primary-color;
+    border-left-width: 2.5em;
+    border-right-width: 2.5em;
+  }
+}
+
+/* Page styling */
+
+
+// Basic styles
+.button-animate {
+  background: none;
+  border: 0;
+  box-sizing: border-box;
+  margin: 1em;
+  padding: 1em 2em;
+  
+  // Using inset box-shadow instead of border for sizing simplicity
+  box-shadow: inset 0 0 0 2px transparent;
+  color: inherit;
+  font-size: inherit;
+  font-weight: 700;
+
+  // Required, since we're setting absolute on pseudo-elements
+  position: relative;
+  vertical-align: middle;
+
+  &::before,
+  &::after {
+    box-sizing: inherit;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.draw {
+    transition: color 0.25s;
+
+  &::before,
+  &::after {
+    // Set border to invisible, so we don't see a 4px border on a 0x0 element before the transition starts
+    border: 2px solid transparent;
+    width: 0;
+    height: 0;
+  }
+
+  // This covers the top & right borders (expands right, then down)
+  &::before {
+    top: 0;
+    left: 0;
+  }
+
+  // And this the bottom & left borders (expands left, then up)
+  &::after {
+    bottom: 0;
+    right: 0;
+  }
+  
+  &:hover {
+    color: $white;
+  }
+
+  // Hover styles
+  &:hover::before,
+  &:hover::after {
+    width: 100%;
+    height: 100%;
+  }
+
+  &:hover::before {
+    border-top-color: $white; // Make borders visible
+    border-right-color: $white;
+    transition:
+      width 0.25s ease-out, // Width expands first
+      height 0.25s ease-out 0.25s; // And then height
+  }
+
+  &:hover::after {
+    border-bottom-color: $white; // Make borders visible
+    border-left-color: $white;
+    transition:
+      border-color 0s ease-out 0.5s, // Wait for ::before to finish before showing border
+      width 0.25s ease-out 0.5s, // And then exanding width
+      height 0.25s ease-out 0.75s; // And finally height
+  }
+}
+ 
+// Inherits from .draw
+.meet {
+  
+  &:hover {
+    color: $primary-color;
+  }
+
+  // Start ::after in same position as ::before
+  &::after {
+    top: 0;
+    left: 0;
+  }
+
+  // Change colors
+  &:hover::before {
+    border-top-color: $primary-color;
+    border-right-color: $primary-color;
+  }
+
+  &:hover::after {
+    border-bottom-color: $primary-color;
+    border-left-color: $primary-color;
+    transition: // Animate height first, then width
+      height 0.25s ease-out,
+      width 0.25s ease-out 0.25s;
+  }
+
+}
+
+// Does not inherit
+.center {
+  &:hover {
+    color: $primary-color;
+  }
+
+  // Set up base styles, we're going to scale instead of animating width/height
+  &::before,
+  &::after {
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transform-origin: center; // Ensure scaling is done from the center (expands outwards)
+  }
+
+  // scale3d(<scale-horizontal>, <scale-vertical>, <scale-depth>);
+  &::before {
+    border-top: 2px solid $primary-color;
+    border-bottom: 2px solid $primary-color;
+    transform: scale3d(0,1,1); // Shrink only width
+  }
+
+  &::after {
+    border-left: 2px solid $primary-color;
+    border-right: 2px solid $primary-color;
+    transform: scale3d(1,0,1); // Shrink only height
+  }
+
+  &:hover::before,
+  &:hover::after {
+    transform: scale3d(1,1,1); // Show full-size
+    transition: transform 0.5s;
+  }
+}
+
+// Border spins around element
+// ::before holds three borders that appear separately, one at a time
+// ::after holds one border that spins around to cover ::before's borders, making their appearance seem smooth
+
+.spin {
+  width: 5em;
+  height: 5em;
+  padding: 0;
+  
+  &:hover {
+    color: $primary-color;
+  }
+
+  &::before,
+  &::after {
+    top: 0;
+    left: 0;
+  }
+
+  &::before {
+    border: 2px solid transparent; // We're animating border-color again
+  }
+
+  &:hover::before {
+    border-top-color: $primary-color; // Show borders
+    border-right-color: $primary-color;
+    border-bottom-color: $primary-color;
+
+    transition:
+      border-top-color 0.15s linear, // Stagger border appearances
+      border-right-color 0.15s linear 0.10s,
+      border-bottom-color 0.15s linear 0.20s;
+  }
+
+  &::after {
+    border: 0 solid transparent; // Makes border thinner at the edges? I forgot what I was doing
+  }
+
+  &:hover::after {
+    border-top: 2px solid $primary-color; // Shows border
+    border-left-width: 2px; // Solid edges, invisible borders
+    border-right-width: 2px; // Solid edges, invisible borders
+    transform: rotate(270deg); // Rotate around circle
+    transition:
+      transform 0.4s linear 0s,
+      border-left-width 0s linear 0.35s; // Solid edge post-rotation
+  }
+}
+
+.circle {
+  border-radius: 100%;
+  box-shadow: none;
+    
+  &::before,
+  &::after {
+    border-radius: 100%;
+  }
+}
+
+.thick {
+  color: $primary-color; 
+
+  &:hover {
+    color: #fff;
+    font-weight: 700;
+  }
+
+  &::before {
+    border: 2.5em solid transparent;
+    z-index: -1;
+  }
+
+  &::after {
+    mix-blend-mode: color-dodge;
+    z-index: -1;
+  }
+
+  &:hover::before {
+    background: $primary-color;
+    border-top-color: $primary-color;
+    border-right-color: $primary-color;
+    border-bottom-color: $primary-color;
+    transition:
+      background 0s linear 0.4s,
+      border-top-color 0.15s linear,
+      border-right-color 0.15s linear 0.15s,
+      border-bottom-color 0.15s linear 0.25s;
+  }
+
+  &:hover::after {
+    border-top: 2.5em solid $primary-color;
+    border-left-width: 2.5em;
+    border-right-width: 2.5em;
+  }
+}
+
+/* Page styling */

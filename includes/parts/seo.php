@@ -162,9 +162,37 @@ function wp_html_compression_start()
 add_action('get_header', 'wp_html_compression_start');
 
 /*function to add defer to all scripts*/
-function js_defer_attr($tag){
-
+//function js_defer_attr($tag){
 # Add defer to all remaining scripts
+//return str_replace( ' src', ' defer="defer" src', $tag );
+//}
+//add_filter( 'script_loader_tag', 'js_defer_attr', 10 );
+
+
+
+
+
+
+
+
+
+
+/*Function to defer or asynchronously load scripts*/
+function js_async_attr($tag){
+	
+	
+# Do not add defer or async attribute to these scripts
+$scripts_to_exclude = array('jquery.js', 'jquery.min.js', 'jquery-migrate.min.js');
+
+foreach($scripts_to_exclude as $exclude_script){
+ if(true == strpos($tag, $exclude_script ) )
+ return $tag; 
+}
+
+# Defer or async all remaining scripts not excluded above
 return str_replace( ' src', ' defer="defer" src', $tag );
 }
-add_filter( 'script_loader_tag', 'js_defer_attr', 10 );?>
+add_filter( 'script_loader_tag', 'js_async_attr', 10 );
+
+
+

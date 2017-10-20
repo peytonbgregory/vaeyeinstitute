@@ -1,11 +1,14 @@
 <?php
 flush_rewrite_rules( false );
 define("THEME_DIR", get_template_directory_uri());
+
 /*--- REMOVE GENERATOR META TAG ---*/
 remove_action('wp_head', 'wp_generator');
 
+wp_customize_support_script();
 // Register Custom Navigation Walker
 require_once ('includes/foundation-walker-top.php');
+require_once ('includes/foundation-walker-drill.php');
 
 
 function my_acf_init() {
@@ -17,8 +20,8 @@ add_action('acf/init', 'my_acf_init');
 
 // ENQUEUE SCRIPTS
 function register_my_scripts() {
-  wp_register_script('jQuery', THEME_DIR . "/node_modules/jquery/dist/jquery.min.js",null,null,false);
-  wp_register_script('foundation', THEME_DIR . "/node_modules/foundation-sites/dist/js/foundation.min.js", array('jquery'),null,true);
+  wp_register_script('jQuery', THEME_DIR . "/dist/js/jquery.min.js",null,null,false);
+  wp_register_script('foundation', THEME_DIR . "/dist/js/foundation.min.js", array('jquery'),null,true);
   wp_enqueue_script(array('jQuery','foundation'));
 }
 
@@ -35,6 +38,18 @@ function register_my_scripts() {
 
 //add_action('wp_print_scripts','register_my_scripts', 0);
 //add_action('wp_print_styles', 'register_my_styles', 2);
+
+
+
+
+
+// Remove Strings from Static Resources
+function _remove_script_version( $src ){ 
+$parts = explode( '?', $src ); 
+return $parts[0]; 
+} 
+add_filter( 'script_loader_src', '_remove_script_version', 15, 1 ); 
+add_filter( 'style_loader_src', '_remove_script_version', 15, 1 );
 
 
 
@@ -97,6 +112,7 @@ add_action( 'after_setup_theme', 'pgthrottle_register_menus' );
 // Add foundation menu Classes
 function add_classes_pg($classes, $item, $args) {
   $classes[] = 'menu';
+  // $classes[] = 'vertical menu align-right';
   return $classes;
 }
 add_filter('nav_menu_css_class','add_classes_pg',1,3);
@@ -411,4 +427,4 @@ if( function_exists('acf_add_options_page') ) {
 
 
 // Loads Optimizations
-// require 'includes/parts/seo.php';
+ // require 'includes/parts/seo.php';

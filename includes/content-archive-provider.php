@@ -1,7 +1,12 @@
 
 
-<section class="grid-container" id="thumbnail-grid">
-    <div class="grid-x small-up-2 medium-up-4 large-up-5">
+<section class="grid-container" id="archive-provider">
+   	<div class="grid-x">
+   	<div class="cell small-12">
+		<h1><small>Our</small> Providers</h1>
+		</div>
+	</div>
+    <div class="grid-x grid-margin-x small-up-2 medium-up-4 large-up-5">
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
   <?php // Provider Archive Page Template
   $proheadsuit = get_field( "provider_headshot_suit" );
@@ -17,45 +22,35 @@
   $proquote = get_field( "patient_quote" );
   $proquotename = get_field( "patient_name" );
 ?>
-
-
-
-
-
-
-    <div class="cell">
-    <div class="grid-container" id="thumbnail-grid">
+<div class="cell" id="prodiver">
       <div class="grid-x text-center" id="post-<?php the_ID(); ?>">
           <div class="cell auto">
 
             <div class="card">
 
-                    <a href="<?php the_permalink(); ?>"><img src="<?php if ( get_field( 'provider_headshot_suit' )) : the_field( 'provider_headshot_suit' ); else : the_field( 'provider_headshot_coat' ); endif; ?>" class="prodiver-img img-responsive" width="270px" /></a>
+                    <a href="<?php the_permalink(); ?>"><img src="
+                    <?php if ( get_field( 'provider_headshot_suit' )) { 
+								the_field( 'provider_headshot_suit' ); 
+								}
+						  elseif ( get_field( 'provider_headshot_coat' )) { 
+							    the_field( 'provider_headshot_coat' ); 
+						  		}	
+						else {
+							echo THEME_DIR.'/imgs/vei-default.png';
+						} ?>" class="prodiver-img img-responsive" width="270px" /></a>
 
-              <div class="card-divider  text-center">
-                <?php the_title(); ?> <?php the_field('provider_title'); ?>
-              </div>
-              <div class="card-section">
-                <?php // Load Provider Specialties
-                 if( $proservices ): ?>
-                  <div class="entry-specialties">
-                    <ul class="simple menu align-center">
-                    <?php $post = $proservices; setup_postdata( $post );?>
-                    <li><a href="<?php the_permalink(); ?>"><i class="fi-checkbox"></i> <?php the_title(); ?></a></li>
-                    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
-                  </ul>
-                  </div>
-                <?php endif; // End Provider Specialties ?>
-
-              </div>
-              <a class="card-divider button primary text-center" href="<?php the_permalink(); ?>" title="<?php the_title(); ?> <?php the_field('provider_title'); ?>">Learn More <i class="fi-link"></i></a>
-            </div>
+             
+				<a class="button text-center" href="<?php the_permalink(); ?>" title="<?php the_title(); ?> <?php the_field('provider_title'); ?>"><div class="truncate h6"><?php the_title(); ?></div><div class="truncate h6 subheading"> <?php the_field('provider_title'); ?></div></a>
+            
+            
+             
+      
 </div>
 
 
       </div><!-- grid-x -->
     </div>
-  </div>
-    <?php endwhile; else : get_template_part( 'no-results', 'index' ); endif; ?>
-      </div><!-- grid-x -->
+</div>
+<?php endwhile; else : get_template_part( 'no-results', 'index' ); endif; ?>
+</div> <!-- grid-x -->
 </section>
