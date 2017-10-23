@@ -1,11 +1,11 @@
 <?php
-flush_rewrite_rules( false );
+// flush_rewrite_rules( false );
 define("THEME_DIR", get_template_directory_uri());
 
 /*--- REMOVE GENERATOR META TAG ---*/
 remove_action('wp_head', 'wp_generator');
 
-wp_customize_support_script();
+
 // Register Custom Navigation Walker
 require_once ('includes/foundation-walker-top.php');
 require_once ('includes/foundation-walker-drill.php');
@@ -424,7 +424,5 @@ if( function_exists('acf_add_options_page') ) {
 		'redirect'		=> false
 	));
 }
-
-
 // Loads Optimizations
  // require 'includes/parts/seo.php';

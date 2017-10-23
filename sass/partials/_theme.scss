@@ -1,61 +1,4 @@
-// off Canvas / Mobile nav - menus
 
-
-div#offCanvasLeft1 {
-   
-		background:$dark-blue;
-		color:$white;
-		@include transition(ease 200ms);
-		a {
-			color:$white;
-		}
-		ul.drilldown {
-			li a {
-				background:$dark-blue;
-				border-bottom:lighten($dark-blue, 10%);
-				border-top:darken($dark-blue, 10%);
-				
-			
-							 &:first-child{
-					border-top:0;
-				  }
-				  &:last-child{
-					border-bottom:0;
-				  }
-				}
-			
-			li a:hover {
-				background:lighten($dark-blue, 10%);
-			}
-			
-			ul.is-drilldown-submenu {
-				li a {
-				background:darken($dark-blue, 10%);
-				border-bottom:lighten($dark-blue, 20%);
-				border-top:darken($dark-blue, 20%);
-				
-			
-							 &:first-child{
-					border-top:0;
-				  }
-				  &:last-child{
-					border-bottom:0;
-				  }
-				}
-			
-			li a:hover {
-				background:lighten($dark-blue, 10%);
-			}
-			}
-		}
-
-	
-} 
-// off canvas - positon left
-
-
-
-// Header
 
 header.site-header {
 
@@ -65,13 +8,6 @@ header.site-header {
     font-size: 1em;
     font-weight: bold;
   }
-	@include breakpoint (small only) {
-		div#social-media {
-		margin: 0 auto;
-		display: table;
-		align-self: center;
-		}
-}
 }
 
 // Breadcrumbs
@@ -126,7 +62,7 @@ ul.breadcrumbs {
         font-size:1em;
       }
     }
-	}
+
   
 	@include breakpoint(small only) {
 		i {
@@ -135,8 +71,6 @@ ul.breadcrumbs {
 		 .vert-div {
 			border-top:1px solid $light-blue;
 			border-bottom:1px solid darken($dark-blue, 10%);
-			 border-left:0;
-			 border-right:0;
 			&:first-child {
 			  border-top: 0;
 			}
@@ -149,7 +83,6 @@ ul.breadcrumbs {
 		}
 		.button {
 			margin:0 auto 1em;
-			display:table;
 		}
 	}
   .button {
@@ -175,7 +108,7 @@ ul.breadcrumbs {
 	color:$white;
 }
 }
-
+}
 
 // Header Search
 
@@ -355,11 +288,6 @@ nav.site-navigation {
 		margin:0 0.5em;
       display:block;
       font-size:115%;
-		 @include transition(ease 200ms);
-	  &:hover {
-		  color:$dark-blue;
-	  }
-  
 
     }
   &:first-child{
@@ -392,10 +320,6 @@ footer.site-footer {
   .menu a {
     padding:0.5rem 0;
     color:$dark-gray;
-	  @include transition(ease 200ms);
-	  &:hover {
-		  color:$dark-blue;
-	  }
   }
   .wpcf7 { // Contact Forms
     textarea {

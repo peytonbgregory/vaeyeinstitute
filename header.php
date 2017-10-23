@@ -25,23 +25,11 @@
     <link rel="stylesheet" type="text/css" href="<?php echo THEME_DIR; ?>/stylesheets/motion-ui.min.css" />
    
 
-
-
-
-
-
-
-
-
-
-
     <!--=== TITLE ===-->
     <title><?php wp_title(); ?> - <?php bloginfo( 'name' ); ?></title>
 
     <!--=== WP_HEAD() ===-->
-
     <?php wp_head(); ?>
-
 </head>
 <?php flush(); ?>
 <body <?php body_class(); ?>>
@@ -115,8 +103,7 @@
     </div>
   </div>
 </header>
-<?php
-echo'<nav class="site-navigation"><div class="grid-container hide-for-small-only align-middle">
+<?php echo'<nav class="site-navigation"><div class="grid-container hide-for-small-only align-middle">
 <div class="grid-x">';
 		wp_nav_menu(array(
       // 'container'       => 'div',
@@ -139,29 +126,14 @@ echo'<nav class="site-navigation"><div class="grid-container hide-for-small-only
 	       'walker' => new F6_TOPBAR_MENU_WALKER(),
 		));
   get_search_form();
-echo'</div></div></nav>'; ?>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<?php echo '<section id="breadcrumb">';
+echo'</div></div></nav>'; 
+	
+	echo '<section id="breadcrumb">';
 if ( is_front_page() && is_home() ) {
 // Blank
  } elseif ( is_front_page()) {
 // Blank
  } elseif ( is_home()) {
 // Blank
- } else {
-  ?> <div class="grid-container"><div class="grid-x"><div class="cell small-12"><?php pgthrottle_breadcrumbs(); ?></div></div></div>
-<? }
-  echo '</section>'; ?>
+ } else { ?> <div class="grid-container"><div class="grid-x"><div class="cell small-12"><?php pgthrottle_breadcrumbs(); ?></div></div></div>
+<? } echo '</section>'; ?>
